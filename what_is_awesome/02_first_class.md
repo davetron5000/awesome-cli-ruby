@@ -2,6 +2,7 @@
 # Act First Class #
 * It's not a "script"
 * It's an _application_
+* Approach it as a first class application
 
 !SLIDE smaller
 # Not First Class #
@@ -9,9 +10,9 @@
 
     @@@ bash
     # Put the jar in your ~/bin directory, put the line
-    java -Xmx512M -jar `dirname $0`/sbt-launch.jar "$@"
+    # java -Xmx512M -jar `dirname $0`/sbt-launch.jar "$@"
     # in a file called sbt in your ~/bin directory and do 
-    $ chmod u+x ~/bin/sbt
+    # chmod u+x ~/bin/sbt
 
 !SLIDE commandline incremental
 # First Class #

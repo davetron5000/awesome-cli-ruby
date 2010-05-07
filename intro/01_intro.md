@@ -11,9 +11,13 @@
 
 
 !SLIDE commandline incremental
+# Emergency! #
 
+    $ vi one_off_script.sh
     $ ./one_off_script.sh -x /tmp/foo.csv > /top/magic.txt
     done.
+    $ git add one_off_script.sh
+    $ git commit -m 'automated stuff in time for launch'
 
 !SLIDE center
 # 6 Months Later&hellip; #
@@ -31,5 +35,9 @@
     ls: /? No such file or directory
     $ vi ./one_off_script.sh
 
-!SLIDE 
+!SLIDE bullets incremental
 # Make even your one-off scripts awesome #
+
+* No script is really a one-off
+* Be kind to "future you"
+* Ruby can make it easy

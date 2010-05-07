@@ -9,7 +9,22 @@
 * line-oriented (greppable)
 * exit codes! (0 for success, -1 for failure)
 * messaging (stderr) vs. output (stdout)
-* messaging (stdout) vs. output (file)
+
+!SLIDE 
+
+    @@@Ruby
+
+    matches = 0
+    $stdin.readlines do |line|
+      if line =~ /foo/
+        puts line 
+        matches += 1
+      end
+      $stderr.puts "Checking #{line}" if verbose
+    end
+
+    exit -1 if matches == 0
+    exit 0
 
 !SLIDE commandline
 # Plays Horribly With Others #
@@ -20,10 +35,19 @@
 !SLIDE commandline incremental
 # Plays Well With Others #
 
-    $ touch foo
-    $ ls foo
-    foo
-    $ rm foo
-    $ ls foo
-    $ rm foo
-    rm: foo: No such file or directory
+    $ svn stat
+    M Rakefile
+    C README.rdoc
+    ? bin/my_cmd
+    C test/tc_cmd.rb
+    $ svn stat | grep ^C
+    C README.rdoc
+    C test/tc_cmd.rb
+    $ svn stat | grep ^C | awk '{print $2}'
+    README.rdoc
+    test/tc_cmd.rb
+    $ vi `svn stat | grep ^C | awk '{print $2}'`
+    # Now editing all files with conflicts
+    $ svn stat | grep ^C | awk '{print $2}' | xargs svn resolved
+    Resolved conflicted state of 'README.rdoc'
+    Resolved conflicted state of 'test/tc_cmd.rb'

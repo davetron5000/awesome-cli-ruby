@@ -27,9 +27,10 @@
         ShowOff.do_static(ARGV)
       else
         ShowOffUtils.help
+        # Should actually exit nonzero here :(
     end
 
-!SLIDE 
+!SLIDE smaller
 # Hand-jammed #
 ## Make host/port cli params? ##
 
@@ -44,49 +45,4 @@
 * Not extensible
 * Leads to a mess
 * Hand-roll help, too
-
-!SLIDE smaller
-# <code>OptionParser</code> #
-
-    @@@ Ruby
-    help = <<HELP
-    Jekyll is a blog-aware, static site generator.
-
-    Basic Command Line Usage:
-      jekyll                                                   # . -> ./_site
-      <snip>
-    HELP
-    require 'optparse'
-    exec = {}; options = {}
-    opts = OptionParser.new do |opts|
-      opts.banner = help
-
-      opts.on("--no-auto", "No auto-regenerate") do
-        options['auto'] = false
-      end
-
-      opts.on("--server [PORT]", "Start web server (default port 4000)") do |port|
-        options['server'] = true
-        options['server_port'] = port unless port.nil?
-      end
-      # <snip>
-    end 
-    # Read command line options into `options` hash
-    opts.parse!
-
-!SLIDE bullets incremental
-# <code>OptionParser</code> - Good #
-* Easy
-* Fairly clear code
-* Can convert some classes (e.g. lists)
-* outputs option summary
-
-!SLIDE bullets incremental
-# <code>OptionParser</code> - Not As Good #
-* Still some boilerplate
-* "git" style is a bit trickier
-* just parses command line
-
-!SLIDE
-# <code>GLI</code>
 

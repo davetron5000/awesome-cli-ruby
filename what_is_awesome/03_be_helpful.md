@@ -8,7 +8,7 @@
 
 !SLIDE commandline incremental
 # Be Helpful #
-## git-style ##
+## command suite AKA "git-style" ##
     $ my_cmd
     lists available sub commands and global options
     $ my_cmd help
@@ -21,7 +21,16 @@
 * no news is good news
 * useful error messages
 
-!SLIDE commandline smaller
+!SLIDE 
+
+    @@@Ruby
+    cmd = "mv #{src}/*.csv #{dest}"
+    unless system(cmd)
+      $stderr.puts "Error executing #{cmd}"
+      $stderr.puts $?
+    end
+
+!SLIDE commandline smaller incremental
 # Not Helpful
 
     $ latex
@@ -62,7 +71,3 @@
 
     See 'git help COMMAND' for more information on a specific command.
     
-!SLIDE bullets
-# Play Well With Others #
-## [Unix Philosophy](http://www.faqs.org/docs/artu/ch01s06.html) ##
-### _(ii) Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input._ ###
