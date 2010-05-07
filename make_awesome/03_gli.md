@@ -4,7 +4,7 @@
 * inspired by Rake
 * Designed to make polished app easy to create
 
-!SLIDE commandline incremental smaller
+!SLIDE commandline smaller
 
     $ sudo gem install gli
     $ gli init my_cmd ls rm init
@@ -12,8 +12,10 @@
     Creating dir ./my_cmd/bin...
     Creating dir ./my_cmd/test...
     Created ./my_cmd/bin/my_cmd
-    $ cd my_cmd
-    $ bin/my_cmd 
+
+!SLIDE commandline smaller incremental
+
+    $ my_cmd/bin/my_cmd 
     usage: my_cmd command [options]
 
     Options:

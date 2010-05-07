@@ -54,7 +54,7 @@
     opts.on("--time [TIME]", 
             Time, 
             "Begin execution at given time") do |time|
-      options['time'] = time
+      options['time'] = time # This is a Time instance
     end
       
 !SLIDE bullets incremental
