@@ -1,10 +1,11 @@
 !SLIDE bullets incremental
-# <code>GLI</code>
-* Designed for 'command suite' style ("Git-Like Interface")
-* inspired by Rake
+# <code>GLI</code> - Git Like Interface
+* Designed for 'command suite' style
 * Designed to make polished app easy to create
+* Syntax inspired by Rake
 
 !SLIDE commandline smaller
+# Bootstrap your Application
 
     $ sudo gem install gli
     $ gli init my_cmd ls rm init
@@ -14,6 +15,7 @@
     Created ./my_cmd/bin/my_cmd
 
 !SLIDE commandline smaller incremental
+# We've written no code, yet
 
     $ my_cmd/bin/my_cmd 
     usage: my_cmd command [options]
@@ -63,7 +65,7 @@
 ## Define Commands ##
 
     @@@ Ruby
-    desc 'Serves the showoff presentation in the current directory'
+    desc 'Serves the showoff presentation in the current dir'
     command :serve do |c|
 
       c.desc 'Port on which to run'

@@ -1,8 +1,18 @@
 !SLIDE bullets incremental
 # Why Ruby? #
-* Low-level system access
-* High-level abstractions
+## Scripting facilities
+* <code>system("whatever you want")</code>
+* <code>stdout = `some other command`</code>
+* <code>FileUtils</code> - cross platform
 * More portable than <code>sh</code>
+* <code>$?</code> gets access to results, e.g. <code>$?.success?</code>
+
+!SLIDE bullets incremental
+# Why Ruby? #
+## Language facilities
+* High-level abstractions
+* <code>gem</code> packaging/distribution
+* Fast - No VM to start up
 
 !SLIDE smaller
 # Hand-jammed #
@@ -39,10 +49,28 @@
         ShowOff.run! :host => ARGV[0] || 'localhost', 
                      :port => (ARGV[1] || '9090').to_i
 
+!SLIDE smaller
+# Hand-jammed #
+## Make host/port cli params? ##
+
+    @@@ Ruby
+      when 'serve'
+        if ARGV[0] == '-h'
+          ARGV.shift
+          host = ARGV.shift
+        end
+        port = '9090'
+        if ARGV[0] == '-p'
+          ARGV.shift
+          port = ARGV.shift
+        end
+        ShowOff.run! :host => host
+                     :port => port.to_i
+
 
 !SLIDE bullets incremental
 # Hand-jammed #
 * Not extensible
 * Leads to a mess
-* Hand-roll help, too
+* Must handjam help messages, too
 
