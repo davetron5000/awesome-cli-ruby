@@ -2,6 +2,10 @@
 
 Slides for my talk at DCRUG, May, 2010
 
+# View
+
+* [View slides online](http://awesome-cli-ruby.heroku.com)
+
 # Building
 
     sudo gem install showoff
