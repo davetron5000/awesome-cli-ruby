@@ -1,11 +1,11 @@
 !SLIDE bullets incremental
 # Why Ruby? #
-## Scripting facilities
+## System facilities
 * <code>system("whatever you want")</code>
-* <code>stdout = `some other command`</code>
-* <code>FileUtils</code> - cross platform
-* More portable than <code>sh</code>
+* <code>stdout = \`some other command\`</code>
 * <code>$?</code> gets access to results, e.g. <code>$?.success?</code>
+* <code>FileUtils</code> - cross platform UNIX-style
+* More portable than <code>sh</code>
 
 !SLIDE bullets incremental
 # Why Ruby? #
@@ -48,6 +48,7 @@
       when 'serve'
         ShowOff.run! :host => ARGV[0] || 'localhost', 
                      :port => (ARGV[1] || '9090').to_i
+      # can't just specify the port
 
 !SLIDE smaller
 # Hand-jammed #
@@ -66,6 +67,7 @@
         end
         ShowOff.run! :host => host
                      :port => port.to_i
+      # showoff serve -p 9090 -h 127.0.0.1 doesn't work
 
 
 !SLIDE bullets incremental
