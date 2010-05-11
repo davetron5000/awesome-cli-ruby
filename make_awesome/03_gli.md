@@ -121,5 +121,5 @@
 !SLIDE bullets
 # Thanks! #
 * [@davetron5000](http://www.twitter.com/davetron5000)
-* [OptionParser](http://rubyforge.org/projects/optionparser/)
-* [GLI](http://github.com/davetron5000/gli/)
+* OptionParser - [http://rubyforge.org/projects/optionparser/](http://rubyforge.org/projects/optionparser/)
+* GLI - [http://github.com/davetron5000/gli/](http://github.com/davetron5000/gli/)
