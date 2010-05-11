@@ -54,7 +54,7 @@
     arg_name 'The name of the argument'
     flag [:f,:flagname]
 
-    # define commands
+    # define subcommands
     # specify special error handling
     # pre/post hooks
 
@@ -62,7 +62,7 @@
 
 !SLIDE small
 # GLI #
-## Define Commands ##
+## Define Sub-commands ##
 
     @@@ Ruby
     desc 'Serves the showoff presentation in the current dir'
