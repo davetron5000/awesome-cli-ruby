@@ -1,17 +1,52 @@
 !SLIDE bullets
 # Play Well With Others #
-## Unix Philosophy
+
+* The UNIX Way
+* The highway?
+
+!SLIDE bullets
+# Play Well With Others #
+
+* The UNIX Way
+* <strike>The highway?</strike> The Cucumber Way
+
+!SLIDE bullets
+# The UNIX Way
 ## [http://www.faqs.org/docs/artu/ch01s06.html](http://www.faqs.org/docs/artu/ch01s06.html) ##
 ### _(ii) Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input._ ###
 
+!SLIDE bullets
+# The Cucumber Way
+* Helpful, formatted output by default
+* Colorful
+* <img src="cuke_fail.png" /> <img src="cuke_pass.png" />
+
 !SLIDE  bullets incremental
 # Play Well With Others #
+## The UNIX Way ##
 * machine-parsable (e.g. delimited)
 * line-oriented (greppable)
 * exit codes! (0 for success, -1 for failure)
 * messaging (stderr) vs. output (stdout)
 
+!SLIDE bullets incremental
+# Play Well With Others #
+## The Cucumber Way ##
+* exit codes!
+* UNIXy as an option
+* Logging, Verbosity flags
+
+!SLIDE bullets incremental
+# Play Well With Others #
+## Which Way?? ##
+* Simple => The UNIX Way
+* Command Suite => it depends
+* Can you make it look really nice?
+* Are you doing something complex?
+* or are you just processing text?
+
 !SLIDE 
+# The UNIX Way #
 
     @@@Ruby
 

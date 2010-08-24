@@ -1,20 +1,29 @@
 !SLIDE commandline incremental
 # Be Helpful #
 ## Simple ##
+
+    $ my_cmd
+    # should not have done anything destructive
+    # maybe just a help statement
     $ my_cmd -h
-    lists common options
+    # lists common options
     $ my_cmd --help
-    should do same thing as -h
+    # should do same thing as -h
+    $ my_cmd -help
+    # if you like your users
+    $ man my_cmd
+    # True love for your users
 
 !SLIDE commandline incremental
 # Be Helpful #
-## command suite AKA "git-style" ##
+## Command Suite ##
+
     $ my_cmd
-    lists available sub commands and global options
+    # lists available sub commands and global options
     $ my_cmd help
-    same thing
+    # same thing
     $ my_cmd help subcommand
-    help on `subcommand` as well as options for that command
+    # help on `subcommand` as well as options for that command
 
 !SLIDE bullets incremental
 # Be Helpful #

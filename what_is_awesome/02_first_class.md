@@ -2,7 +2,7 @@
 # Act First Class #
 * It's not a "script"
 * It's an _application_
-* Approach it as a first class application
+* Approach it as a first-class application
 
 !SLIDE smaller
 # Not First Class #

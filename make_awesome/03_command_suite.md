@@ -1,3 +1,69 @@
+!SLIDE
+# Command Suite #
+
+!SLIDE smaller
+# Hand-jammed #
+
+    @@@ Ruby
+    #!/usr/bin/env ruby
+    $LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+
+    require 'showoff'
+    command = ARGV.shift
+
+    case command
+      when 'create'
+        ShowOffUtils.create
+      when 'add'
+        ShowOffUtils.add_slide
+      when 'heroku'
+        ShowOffUtils.heroku
+      when 'serve'
+        ShowOff.run! :host => 'localhost', :port => 9090
+      when 'static' 
+        ShowOff.do_static(ARGV)
+      else
+        ShowOffUtils.help
+        # Should actually exit nonzero here :(
+    end
+
+!SLIDE smaller
+# Hand-jammed #
+## Make host/port cli params? ##
+
+    @@@ Ruby
+      when 'serve'
+        ShowOff.run! :host => ARGV[0] || 'localhost', 
+                     :port => (ARGV[1] || '9090').to_i
+      # can't just specify the port
+
+!SLIDE smaller
+# Hand-jammed #
+## Make host/port cli params? ##
+
+    @@@ Ruby
+      when 'serve'
+        if ARGV[0] == '-h'
+          ARGV.shift
+          host = ARGV.shift
+        end
+        port = '9090'
+        if ARGV[0] == '-p'
+          ARGV.shift
+          port = ARGV.shift
+        end
+        ShowOff.run! :host => host
+                     :port => port.to_i
+      # showoff serve -p 9090 -h 127.0.0.1 doesn't work
+
+
+!SLIDE bullets incremental
+# Hand-jammed #
+* Not extensible
+* Leads to a mess
+* Must handjam help messages, too
+* Suprisingly prolific
+
 !SLIDE bullets incremental
 # <code>GLI</code> - Git Like Interface
 * Designed for 'command suite' style
@@ -118,8 +184,38 @@
 * Generate RDoc documentation
 * Parse an "rc" file for user-defined defaults
 
-!SLIDE bullets
+!SLIDE bullets incremental
+# Commander #
+* Similar syntax to GLI
+* Can convert types
+* glues many gems together (highline, asciitables, growl)
+* No hooks or config file support 
+
+!SLIDE bullets incremental
+# Trollop #
+* Simple apps with less code than <code>OptionParser</code>
+* More verbose for command-suite
+* Single-file distro -- easy to include
+
+!SLIDE bullets incremental
+# Thor #
+* Define tasks in ruby files
+* Install those tasks in a central repo
+* Call those tasks from anywhere
+* <code>thor my_app:some_task</code>
+* More a replacement for rake
+
+!SLIDE bullets incremental
+# The Point #
+* Your command-line apps should be awesome
+* Ruby provides *many* ways to do that
+* Be kind to future you
+
+!SLIDE smbullets
 # Thanks! #
 * [@davetron5000](http://www.twitter.com/davetron5000)
 * OptionParser - [http://rubyforge.org/projects/optionparser/](http://rubyforge.org/projects/optionparser/)
 * GLI - [http://github.com/davetron5000/gli/](http://github.com/davetron5000/gli/)
+* Trollop - [http://trollop.rubyforge.org/](http://trollop.rubyforge.org/)
+* Commander - [http://visionmedia.github.com/commander/](http://visionmedia.github.com/commander/)
+* Thor - [http://github.com/wycats/thor](http://github.com/wycats/thor)

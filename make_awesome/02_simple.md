@@ -1,8 +1,12 @@
+!SLIDE
+# Simple #
+* <code>OptionParser</code>
+
 !SLIDE commandline
 # <code>OptionParser</code> #
 
-    $ gem install OptionParser 
     $ ri OptionParser
+    # It's actually already installed!
 
 !SLIDE smaller
 # <code>OptionParser</code> #
