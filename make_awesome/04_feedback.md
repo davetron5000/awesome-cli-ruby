@@ -9,3 +9,4 @@
 * Highline (handles user I/O) - [http://highline.rubyforge.org/](http://highline.rubyforge.org/)
 * Commander (abstracts OptionParser and Highline) - * [http://visionmedia.github.com/commander/](http://visionmedia.github.com/commander/)
 * Aruba (test CLI apps) - [http://github.com/aslakhellesoy/aruba](http://github.com/aslakhellesoy/aruba)
+* Trollop; similar to GLI - [http://trollop.rubyforge.org/](http://trollop.rubyforge.org/)
