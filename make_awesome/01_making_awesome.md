@@ -17,8 +17,8 @@
 !SLIDE bullets incremental
 # Why Ruby? #
 ## Community
-* Tons of fine-grained gems
 * Part of the culture
+* Tons of fine-grained gems (if you know where to look)
 
 !SLIDE
 # How? #
