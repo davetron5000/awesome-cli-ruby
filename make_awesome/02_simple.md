@@ -62,15 +62,10 @@
     end
       
 !SLIDE bullets incremental
-# <code>OptionParser</code> - Good #
+# <code>OptionParser</code>
 * Easy
 * Fairly clear code
 * Can convert some types 
 * outputs option summary
-
-!SLIDE bullets incremental
-# <code>OptionParser</code> - Not As Good #
-* Still some boilerplate
 * command suites/"git-style" is difficult
-* just parses command line
 
