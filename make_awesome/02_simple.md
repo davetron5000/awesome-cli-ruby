@@ -1,6 +1,6 @@
 !SLIDE
 # Simple #
-* <code>OptionParser</code>
+## <code>OptionParser</code> ##
 
 !SLIDE commandline
 # <code>OptionParser</code> #

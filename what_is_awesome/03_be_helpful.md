@@ -1,3 +1,62 @@
+!SLIDE
+# Be helpful
+
+
+!SLIDE commandline smaller incremental
+# Not Helpful
+
+    $ latex
+    This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+    **
+    ^C
+    $ latex help
+    This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+    entering extended mode
+    ! I can't find file `help'.
+    <*> help
+            
+    Please type another input file name:^C
+    ! I can't find file `help'.
+    <*> help
+            
+    Please type another input file name: ^D
+    ! Emergency stop.
+    <*> help
+            
+    No pages of output.
+    Transcript written on texput.log.
+
+!SLIDE commandline small incremental
+# Helpful
+
+    $ curl -h
+    Usage: curl [options...] <url>
+    Options: (H) means HTTP/HTTPS only, (F) means FTP only
+        --anyauth       Pick "any" authentication method (H)
+     -a/--append        Append to target file when uploading (F/SFTP)
+        --basic         Use HTTP Basic Authentication (H)
+    <snip>
+     -V/--version       Show version number and quit
+     -w/--write-out <format> What to output after completion
+     -q                 If used as the first parameter disables .curlrc
+
+!SLIDE commandline small incremental
+# Helpful
+
+    $ git
+    usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+               [-p|--paginate|--no-pager]
+               [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+               [--help] COMMAND [ARGS]
+
+    The most commonly used git commands are:
+       add        Add file contents to the index
+       bisect     Find by binary search the change that introduced a bug
+       <snip>
+       tag        Create, list, delete or verify a tag object signed with GPG
+
+    See 'git help COMMAND' for more information on a specific command.
+    
 !SLIDE commandline incremental
 # Be Helpful #
 ## Simple ##
@@ -39,44 +98,3 @@
       $stderr.puts $?
     end
 
-!SLIDE commandline smaller incremental
-# Not Helpful
-
-    $ latex
-    This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
-    **
-    ^C
-    $ latex help
-    This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
-    entering extended mode
-    ! I can't find file `help'.
-    <*> help
-            
-    Please type another input file name:^C
-    ! I can't find file `help'.
-    <*> help
-            
-    Please type another input file name: ^D
-    ! Emergency stop.
-    <*> help
-            
-    No pages of output.
-    Transcript written on texput.log.
-
-!SLIDE commandline small
-# Helpful
-
-    $ git
-    usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
-               [-p|--paginate|--no-pager]
-               [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
-               [--help] COMMAND [ARGS]
-
-    The most commonly used git commands are:
-       add        Add file contents to the index
-       bisect     Find by binary search the change that introduced a bug
-       <snip>
-       tag        Create, list, delete or verify a tag object signed with GPG
-
-    See 'git help COMMAND' for more information on a specific command.
-    

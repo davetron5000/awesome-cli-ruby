@@ -1,5 +1,11 @@
-!SLIDE
+!SLIDE bullets incremental
 # Command Suite #
+
+* Hand-jammed
+* GLI
+* Commander
+* Trollop
+* Thor
 
 !SLIDE smaller
 # Hand-jammed #
