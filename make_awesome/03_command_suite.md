@@ -1,12 +1,3 @@
-!SLIDE bullets incremental
-# Command Suite #
-
-* Hand-jammed
-* GLI
-* Commander
-* Trollop
-* Thor
-
 !SLIDE smaller
 # Hand-jammed #
 
@@ -33,36 +24,6 @@
         # Should actually exit nonzero here :(
     end
 
-!SLIDE smaller
-# Hand-jammed #
-## Make host/port cli params? ##
-
-    @@@ Ruby
-      when 'serve'
-        ShowOff.run! :host => ARGV[0] || 'localhost', 
-                     :port => (ARGV[1] || '9090').to_i
-      # can't just specify the port
-
-!SLIDE smaller
-# Hand-jammed #
-## Make host/port cli params? ##
-
-    @@@ Ruby
-      when 'serve'
-        if ARGV[0] == '-h'
-          ARGV.shift
-          host = ARGV.shift
-        end
-        port = '9090'
-        if ARGV[0] == '-p'
-          ARGV.shift
-          port = ARGV.shift
-        end
-        ShowOff.run! :host => host
-                     :port => port.to_i
-      # showoff serve -p 9090 -h 127.0.0.1 doesn't work
-
-
 !SLIDE bullets incremental
 # Hand-jammed #
 * Not extensible
@@ -79,7 +40,6 @@
 !SLIDE commandline smaller
 # Bootstrap your Application
 
-    $ sudo gem install gli
     $ gli init my_cmd ls rm init
     Creating dir ./my_cmd/lib...
     Creating dir ./my_cmd/bin...
@@ -126,9 +86,9 @@
     arg_name 'The name of the argument'
     flag [:f,:flagname]
 
-    # define subcommands
-    # specify special error handling
-    # pre/post hooks
+    # Define subcommands
+    # Do specify special error handling
+    # Write any Pre/Post hooks
 
     GLI.run(ARGV)
 
@@ -170,6 +130,8 @@
 
     @@@ Ruby
     pre do |global,command,options,args|
+      # Create a global connection to Trac
+      # for all commands (other than help)
       if command.nil? || command.name == :help
         # not creating a trac instance
       else
@@ -193,15 +155,8 @@
 !SLIDE bullets incremental
 # Commander #
 * Similar syntax to GLI
-* Can convert types
 * glues many gems together (highline, asciitables, growl)
 * No hooks or config file support 
-
-!SLIDE bullets incremental
-# Trollop #
-* Simple apps with less code than <code>OptionParser</code>
-* More verbose for command-suite
-* Single-file distro -- easy to include
 
 !SLIDE bullets incremental
 # Thor #
@@ -221,7 +176,11 @@
 # Thanks! #
 * [@davetron5000](http://www.twitter.com/davetron5000)
 * OptionParser - [http://rubyforge.org/projects/optionparser/](http://rubyforge.org/projects/optionparser/)
-* GLI - [http://github.com/davetron5000/gli/](http://github.com/davetron5000/gli/)
 * Trollop - [http://trollop.rubyforge.org/](http://trollop.rubyforge.org/)
+* GLI - [http://github.com/davetron5000/gli/](http://github.com/davetron5000/gli/)
 * Commander - [http://visionmedia.github.com/commander/](http://visionmedia.github.com/commander/)
+* Highline (user interaction)- [http://highline.rubyforge.org/](http://highline.rubyforge.org/)
+* Asciitables - [http://github.com/visionmedia/terminal-table](http://github.com/visionmedia/terminal-table)
+* Rainbow (colorful output) - [http://github.com/sickill/rainbow](http://github.com/sickill/rainbow)
+* Term-ansicolor (colorful output) - [http://github.com/flori/term-ansicolor](http://github.com/flori/term-ansicolor)
 * Thor - [http://github.com/wycats/thor](http://github.com/wycats/thor)

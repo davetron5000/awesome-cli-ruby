@@ -73,15 +73,6 @@
     $ man my_cmd
     # True love for your users
 
-!SLIDE 
-
-    @@@Ruby
-    cmd = "mv #{src}/*.csv #{dest}"
-    unless system(cmd)
-      $stderr.puts "Error executing #{cmd}"
-      $stderr.puts $?
-    end
-
 !SLIDE commandline incremental
 # Be Helpful #
 ## Command Suite ##
@@ -96,4 +87,13 @@
 !SLIDE 
 # Be Helpful #
 ## Useful error messages ##
+### (or at least trap the errors) ###
+
+    @@@Ruby
+    cmd = "mv #{src}/*.csv #{dest}"
+    unless system(cmd)
+      $stderr.puts "Error executing #{cmd}"
+      $stderr.puts $?
+    end
+
 

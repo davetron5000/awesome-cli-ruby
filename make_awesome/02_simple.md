@@ -50,17 +50,6 @@
         options['server_port'] = port unless port.nil?
       end
 
-!SLIDE smaller
-# <code>OptionParser</code>
-## Casting
-
-    @@@ Ruby
-    opts.on("--time [TIME]", 
-            Time, 
-            "Begin execution at given time") do |time|
-      options['time'] = time # This is a Time instance
-    end
-      
 !SLIDE bullets incremental
 # <code>OptionParser</code>
 * Easy
@@ -68,4 +57,10 @@
 * Can convert some types 
 * outputs option summary
 * command suites/"git-style" is difficult
+
+!SLIDE bullets incremental
+# Trollop #
+* Less code than <code>OptionParser</code>
+* Single-file distro -- easy to include
+* More verbose for command-suite (but easier than <code>OptionParser</code>)
 
