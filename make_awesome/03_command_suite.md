@@ -160,11 +160,8 @@
 
 !SLIDE bullets incremental
 # Thor #
-* Define tasks in ruby files
-* Install those tasks in a central repo
-* Call those tasks from anywhere
-* <code>thor my_app:some_task</code>
-* More a replacement for rake
+* Define tasks in ruby files and install them in a central repo
+* Call those tasks from anywhere: <code>thor my_app:some_task</code>
 
 !SLIDE bullets incremental
 # The Point #
