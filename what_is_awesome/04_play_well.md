@@ -130,17 +130,6 @@
     $ svn stat | grep ^C | awk '{print $2}' | xargs svn resolved
     Resolved conflicted state of 'README.rdoc'
     Resolved conflicted state of 'test/tc_cmd.rb'
-!SLIDE bullets incremental
-# Play Well With Others #
-
-* The UNIX Way
-* The highway?
-
-!SLIDE bullets
-# Play Well With Others #
-
-* The UNIX Way
-* <strike>The highway?</strike> The Cucumber Way
 
 !SLIDE bullets
 # The UNIX Way
@@ -172,27 +161,34 @@
     exit -1 if matches == 0
     exit 0
 
+!SLIDE bullets incremental
+# Play Well With Others #
+
+* The UNIX Way
+* The highway?
+
+!SLIDE bullets
+# Play Well With Others #
+
+* The UNIX Way
+* <strike>The highway?</strike> The Cucumber Way
+
 !SLIDE bullets
 # The Cucumber Way
-* Helpful, formatted output by default
-* Colorful
+* A user _experience_ on the command line
+* Colorful, formatted output
 * <img src="cuke_fail.png" /> <img src="cuke_pass.png" />
 
 !SLIDE bullets incremental
 # Play Well With Others #
 ## The Cucumber Way ##
 * exit codes!
-* UNIXy as an option
-* Color/Bold - <code>rainbow</code>, <code>term-ansicolor</code>
-* Do it all the way 
+* UNIXy option available
+* Colors/Bold/Italic - <code>rainbow</code>, <code>term-ansicolor</code>
+* Go big or go home
 
 !SLIDE bullets incremental
 # Play Well With Others #
-## Which Way?? ##
-* Simple => The UNIX Way
-* Command Suite => it depends
-* Is your app highly complex/sophisitcated?
-* Or are you just processing text?
-* The UNIX Way is always safe
+## The UNIX Way is always a good choice ##
 
 

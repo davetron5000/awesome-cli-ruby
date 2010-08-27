@@ -39,7 +39,7 @@
 * Designed for 'command suite' style
 * Designed to make polished app easy to create
 
-!SLIDE commandline smaller
+!SLIDE commandline 
 # Bootstrap your Application
 
     $ gli init my_cmd ls rm init
@@ -78,7 +78,7 @@
 
 !SLIDE smaller
 # GLI #
-## Scaffold app ##
+## Global Options ##
 
     @@@ Ruby
     desc 'Force overwriting files'
@@ -91,12 +91,13 @@
 
 !SLIDE small
 # GLI #
-## Define Sub-commands ##
+## Commands ##
 
     @@@ Ruby
     desc 'Serves the showoff presentation in the current dir'
     command :serve do |c|
 
+      # Same syntax as for global options
       c.desc 'Port on which to run'
       c.default_value "9090"
       c.flag [:p,:port]
@@ -170,12 +171,13 @@
 !SLIDE smbullets
 # Thanks! #
 * [@davetron5000](http://www.twitter.com/davetron5000)
-* OptionParser - [http://rubyforge.org/projects/optionparser/](http://rubyforge.org/projects/optionparser/)
-* Trollop - [http://trollop.rubyforge.org/](http://trollop.rubyforge.org/)
-* GLI - [http://github.com/davetron5000/gli/](http://github.com/davetron5000/gli/)
-* Commander - [http://visionmedia.github.com/commander/](http://visionmedia.github.com/commander/)
-* Highline (user interaction)- [http://highline.rubyforge.org/](http://highline.rubyforge.org/)
 * Asciitables - [http://github.com/visionmedia/terminal-table](http://github.com/visionmedia/terminal-table)
+* Commander - [http://visionmedia.github.com/commander/](http://visionmedia.github.com/commander/)
+* GLI - [http://github.com/davetron5000/gli/](http://github.com/davetron5000/gli/)
+* Highline (user interaction)- [http://highline.rubyforge.org/](http://highline.rubyforge.org/)
 * Rainbow (colorful output) - [http://github.com/sickill/rainbow](http://github.com/sickill/rainbow)
 * Term-ansicolor (colorful output) - [http://github.com/flori/term-ansicolor](http://github.com/flori/term-ansicolor)
 * Thor - [http://github.com/wycats/thor](http://github.com/wycats/thor)
+* Trollop - [http://trollop.rubyforge.org/](http://trollop.rubyforge.org/)
+* Slides on Github [github.com/davetron5000/awesome-cli-ruby](http://www.github.com/davetron5000/awesome-cli-ruby)
+* View Slides on Heroku [awesome-cli-ruby.heroku.com](http://awesome-cli-ruby.heroku.com)

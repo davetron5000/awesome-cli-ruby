@@ -12,17 +12,9 @@
 # <code>OptionParser</code> #
 
     @@@ Ruby
-    help = <<HELP
-    Jekyll is a blog-aware, static site generator.
-
-    Basic Command Line Usage:
-      jekyll                         # . -> ./_site
-      <snip>
-    HELP
-    require 'optparse'
-    exec = {}; options = {}
+    options = {}
     opts = OptionParser.new do |opts|
-      opts.banner = help
+      opts.banner = "My simple command line app"
 
       # option specifications go here
     end
