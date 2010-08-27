@@ -1,3 +1,6 @@
+!SLIDE
+# Command Suite #
+
 !SLIDE smaller
 # Hand-jammed #
 
@@ -35,7 +38,6 @@
 # <code>GLI</code> - Git Like Interface
 * Designed for 'command suite' style
 * Designed to make polished app easy to create
-* Syntax inspired by Rake
 
 !SLIDE commandline smaller
 # Bootstrap your Application
@@ -62,7 +64,16 @@
         init - Describe init here
         ls   - Describe ls here
         rm   - Describe rm here
-        
+      
+!SLIDE commandline incremental
+# GLI #
+
+    $ bin/my_cmd help ls
+    ls [options] Describe arguments to ls here
+        Describe ls here
+
+        Options:
+            -s arg - Describe a flag to ls (default: default)
     
 
 !SLIDE smaller
@@ -70,27 +81,13 @@
 ## Scaffold app ##
 
     @@@ Ruby
-    #!/usr/bin/ruby
-    $: << File.expand_path(File.dirname(__FILE__) + '/../lib')
-    require 'rubygems'
-    require 'gli'
+    desc 'Force overwriting files'
+    switch [:f,:force]
 
-    include GLI
-
-    # Define any global options you want
-    desc 'Describe some switch here'
-    switch [:s,:switch]
-
-    desc 'Describe some flag here'
-    default_value 'the default'
-    arg_name 'The name of the argument'
-    flag [:f,:flagname]
-
-    # Define subcommands
-    # Do specify special error handling
-    # Write any Pre/Post hooks
-
-    GLI.run(ARGV)
+    desc 'Output data to this file'
+    default_value 'ouput.yml'
+    arg_name 'Path to the file'
+    flag [:f,:file]
 
 !SLIDE small
 # GLI #
@@ -106,10 +103,12 @@
 
       c.action do |global_options,options,args|
         if !File.exists?(ShowOffUtils::SHOWOFF_JSON_FILE)
-            raise "fail. not a showoff directory"
+          raise "fail. not a showoff directory"
         end
-        ShowOff.run! :host => 'localhost', 
-                     :port => options[:p].to_i
+        unless global_options[:dryrun]
+          ShowOff.run! :host => 'localhost', 
+                       :port => options[:p].to_i
+        end
       end
     end
 
@@ -130,16 +129,15 @@
 
     @@@ Ruby
     pre do |global,command,options,args|
-      # Create a global connection to Trac
-      # for all commands (other than help)
-      if command.nil? || command.name == :help
-        # not creating a trac instance
+      $url = global[:url]
+      raise "You must specify a URL" if $url.nil?
+      $trac = Trac.new($url,global[:u],global[:p])
+      if $trac.valid?
+        true
       else
-        $url = global[:url]
-        raise "You must specify a URL" if $url.nil?
-        $trac = Trac.new($url,global[:u],global[:p])
+        $stderr.puts "Couldn't connect to Trac at #{$url}!"
+        false
       end
-      true
     end
 
     post do |global,command,options,args|
