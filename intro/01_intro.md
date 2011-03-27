@@ -1,11 +1,9 @@
 !SLIDE smbullets
-# Ruby for Awesome #
-# Command Line Applications #
-## Dave Copeland
+# Start making Awesome Command-Line Aps
+## (with Ruby)
+### Dave Copeland
 * [@davetron5000](http://www.twitter.com/davetron5000) / davidcopeland (at) naildrivin5.com
 * [naildrivin5.com/blog](http://www.naildrivin5.com/blog)
-* Slides on Github [github.com/davetron5000/awesome-cli-ruby](http://www.github.com/davetron5000/awesome-cli-ruby)
-* View Slides on Heroku [awesome-cli-ruby.heroku.com](http://awesome-cli-ruby.heroku.com)
 
 !SLIDE commandline incremental
 # Who am I? #
@@ -26,8 +24,10 @@
     2010 history | grep IDE
 
 !SLIDE 
-# Who cares about command line apps? #
+# Why care about command-line apps? #
 
+!SLIDE
+# An all too familiar tale…
 
 !SLIDE commandline incremental
 # Emergency! #
@@ -58,5 +58,5 @@
 # Make even your one-off scripts awesome #
 
 * No script is really a one-off
-* Be kind to "future you"
+* Be kind to “future you”
 * Ruby can make it easy

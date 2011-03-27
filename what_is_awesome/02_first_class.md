@@ -1,11 +1,11 @@
 !SLIDE bullets incremental
-# Act First Class #
-* It's not a "script"
-* It's an _application_
-* Approach it as a first-class application
+# ① Act First Class #
+* It's not a “script”
+* …it's an _application_
+* Approach it as you would first-class application
 
 !SLIDE smaller
-# Not First Class #
+# Example - Not First Class #
 ## [SBT](http://code.google.com/p/simple-build-tool/wiki/Setup) ##
 
     @@@ bash
@@ -15,7 +15,7 @@
     # chmod u+x ~/bin/sbt
 
 !SLIDE commandline incremental
-# First Class #
+# Example - First Class #
     $ gem install showoff
     $ showoff help
     usage: showoff command
@@ -30,3 +30,8 @@
         serve        - Serves the showoff presentation in the 
                        current directory
 
+!SLIDE bullets incremental
+# How?
+* Don't start off in `bash`…use Ruby
+* Plan ahead for a _real_ UI, installation, maintainability, documentation, etc.
+* If you plan ahead, this stuff isn't that hard

@@ -1,8 +1,8 @@
 !SLIDE 
-# Play Well With Others #
+# ➂ Play Well With Others #
 
 !SLIDE commandline incremental smaller
-# Plays Horribly With Others #
+# Example - Plays Horribly With Others #
 
     $ mvn test -Dtest=TestHeatingComparison
     [INFO] Scanning for projects...
@@ -107,49 +107,27 @@
     0
     
 
-!SLIDE commandline smaller
-# <code>[ERROR] BUILD FAILURE</code>
-# Exits with 0 - success!?!?!
-
 !SLIDE commandline incremental
-# Plays Well With Others #
+# Example - Plays Well With Others #
 
     $ svn stat
     M Rakefile
     C README.rdoc
     ? bin/my_cmd
     C test/tc_cmd.rb
-    $ svn stat | grep ^C
-    C README.rdoc
-    C test/tc_cmd.rb
-    $ svn stat | grep ^C | awk '{print $2}'
-    README.rdoc
-    test/tc_cmd.rb
     $ vi `svn stat | grep ^C | awk '{print $2}'`
     # Now editing all files with conflicts
     $ svn stat | grep ^C | awk '{print $2}' | xargs svn resolved
     Resolved conflicted state of 'README.rdoc'
     Resolved conflicted state of 'test/tc_cmd.rb'
+
 !SLIDE bullets incremental
-# Play Well With Others #
-
-* The UNIX Way
-* The highway?
-
-!SLIDE bullets
-# Play Well With Others #
-
-* The UNIX Way
-* <strike>The highway?</strike> The Cucumber Way
-
-!SLIDE bullets
 # The UNIX Way
 ## [http://www.faqs.org/docs/artu/ch01s06.html](http://www.faqs.org/docs/artu/ch01s06.html) ##
 ### _(ii) Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input._ ###
 
 !SLIDE  bullets incremental
-# Play Well With Others #
-## The UNIX Way ##
+# The UNIX Way ##
 * machine-parsable (e.g. delimited)
 * line-oriented (greppable)
 * exit codes! (0 for success, -1 for failure)
@@ -160,38 +138,18 @@
 
     @@@Ruby
 
+    if ARGV[0]
+      $stderr.puts "ERROR: no search term"
+      exit -2 
+    end
     matches = 0
     $stdin.readlines do |line|
-      if line =~ /foo/
+      if line =~ /#{ARGV[0]}/
         puts line 
         matches += 1
       end
-      $stderr.puts "Checking #{line}" if verbose
     end
 
     exit -1 if matches == 0
     exit 0
-
-!SLIDE bullets
-# The Cucumber Way
-* Helpful, formatted output by default
-* Colorful
-* <img src="cuke_fail.png" /> <img src="cuke_pass.png" />
-
-!SLIDE bullets incremental
-# Play Well With Others #
-## The Cucumber Way ##
-* exit codes!
-* UNIXy as an option
-* Color/Bold - <code>rainbow</code>, <code>term-ansicolor</code>
-* Do it all the way 
-
-!SLIDE bullets incremental
-# Play Well With Others #
-## Which Way?? ##
-* Simple => The UNIX Way
-* Command Suite => it depends
-* Is your app highly complex/sophisitcated?
-* Or are you just processing text?
-* The UNIX Way is always safe
 

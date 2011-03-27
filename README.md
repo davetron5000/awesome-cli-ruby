@@ -1,6 +1,6 @@
 # Awesome Command Line Applications in Ruby
 
-Slides for my talk at DCRUG, May, 2010
+Slides for my talk at RubyNation, March, 2011
 
 # View
 

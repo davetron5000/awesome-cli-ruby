@@ -1,9 +1,8 @@
 !SLIDE
-# Be helpful
-
+# ② Be helpful
 
 !SLIDE commandline smaller incremental
-# Not Helpful
+# Example - Not Helpful
 
     $ latex
     This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
@@ -27,7 +26,8 @@
     Transcript written on texput.log.
 
 !SLIDE commandline small incremental
-# Helpful
+# Example - Helpful
+## (Simple application)
 
     $ curl -h
     Usage: curl [options...] <url>
@@ -42,7 +42,7 @@
 
 !SLIDE commandline small incremental
 # Helpful
-
+## (Command Suite application)
     $ git
     usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
                [-p|--paginate|--no-pager]
@@ -57,43 +57,51 @@
 
     See 'git help COMMAND' for more information on a specific command.
     
-!SLIDE commandline incremental
+!SLIDE bullets incremental
 # Be Helpful #
 ## Simple ##
+### `my_cmd`
 
-    $ my_cmd
-    # should not have done anything destructive
-    # maybe just a help statement
-    $ my_cmd -h
-    # lists common options
-    $ my_cmd --help
-    # should do same thing as -h
-    $ my_cmd -help
-    # if you like your users
-    $ man my_cmd
-    # True love for your users
+* Don't do anything destructive by default
+* Show a brief help statement
 
-!SLIDE 
+!SLIDE bullets incremental
+# Be Helpful #
+## Simple ##
+### `my_cmd -h`
 
-    @@@Ruby
-    cmd = "mv #{src}/*.csv #{dest}"
-    unless system(cmd)
-      $stderr.puts "Error executing #{cmd}"
-      $stderr.puts $?
-    end
+* Show a fuller help statement
+* Also support `--help`
 
-!SLIDE commandline incremental
+!SLIDE bullets incremental
 # Be Helpful #
 ## Command Suite ##
+### `my_cmd`
 
-    $ my_cmd
-    # lists available sub commands and global options
-    $ my_cmd help
-    # same thing
-    $ my_cmd help subcommand
-    # help on `subcommand` as well as options for that command
+* List available commands
+* List globally-applicable options
+* Oh, and maybe say what your app is for
 
-!SLIDE 
+!SLIDE bullets incremental
+# Be Helpful
+## Command Suite
+### `my_cmd help`
+* Same thing
+
+!SLIDE bullets incremental
 # Be Helpful #
-## Useful error messages ##
+## Command Suite ##
+### `my_cmd help command_name`
 
+* help on `command_name` 
+* i.e. what it does
+* and the options available
+
+!SLIDE bullets incremental
+# Oh, and useful error messages
+* “undefined method `[]' for nil:NilClass (NoMethodError)”
+
+!SLIDE bullets incremental
+# One `if` and 3 minutes later…
+* “Please specify your username”
+* _(or whatever)_
