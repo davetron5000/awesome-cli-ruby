@@ -1,6 +1,18 @@
 !SLIDE 
 # ➂ Play Well With Others #
 
+!SLIDE bullets incremental
+# The UNIX Way
+## [http://www.faqs.org/docs/artu/ch01s06.html](http://www.faqs.org/docs/artu/ch01s06.html) ##
+### _(ii) Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input._ ###
+
+!SLIDE  bullets incremental
+# The UNIX Way ##
+* machine-parsable (e.g. delimited)
+* line-oriented (greppable)
+* exit codes! (0 for success, -1 for failure)
+* messaging (stderr) vs. output (stdout)
+
 !SLIDE commandline incremental smaller
 # Example - Plays Horribly With Others #
 
@@ -106,7 +118,6 @@
     $ echo $?
     0
     
-
 !SLIDE commandline incremental
 # Example - Plays Well With Others #
 
@@ -121,36 +132,28 @@
     Resolved conflicted state of 'README.rdoc'
     Resolved conflicted state of 'test/tc_cmd.rb'
 
-!SLIDE bullets incremental
-# The UNIX Way
-## [http://www.faqs.org/docs/artu/ch01s06.html](http://www.faqs.org/docs/artu/ch01s06.html) ##
-### _(ii) Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input._ ###
-
-!SLIDE  bullets incremental
-# The UNIX Way ##
-* machine-parsable (e.g. delimited)
-* line-oriented (greppable)
-* exit codes! (0 for success, -1 for failure)
-* messaging (stderr) vs. output (stdout)
-
-!SLIDE 
+!SLIDE small
 # The UNIX Way #
 ## In a nutshell 
 
     @@@Ruby
 
     if ARGV[0]
+      # messaging goes to the right place!
       $stderr.puts "ERROR: no search term"
+      # proper exit code
       exit -1
     end
     matches = 0
     $stdin.readlines do |line|
       if line =~ /#{ARGV[0]}/
+        # not messing with stdin; line-oriented
         puts line 
         matches += 1
       end
     end
 
     exit -2 if matches == 0
+    # proper exit code
     exit 0
 

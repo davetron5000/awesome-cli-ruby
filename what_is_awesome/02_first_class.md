@@ -17,6 +17,7 @@
 !SLIDE commandline incremental
 # Example - First Class #
     $ gem install showoff
+    Successfully installed gem showoff
     $ showoff help
     usage: showoff command
 
@@ -33,5 +34,7 @@
 !SLIDE bullets incremental
 # How?
 * Don't start off in `bash`…use Ruby
-* Plan ahead for a _real_ UI, installation, maintainability, documentation, etc.
+* Decide to have a _real_ UI
+* Decide to use good design, write documentation, and distribute with RubyGems
+* Decide to *care*
 * If you plan ahead, this stuff isn't that hard

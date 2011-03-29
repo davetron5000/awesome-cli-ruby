@@ -15,9 +15,10 @@
 * `readline` - (builtin) command-line history/editing
 
 !SLIDE bullets incremental
-# Testing
-* [`fakefs`](https://github.com/defunkt/fakefs) - Fake out the filesystem
+# Other Stuff
+* [`fakefs`](https://github.com/defunkt/fakefs) - Fake out the filesystem for testing
 * [`aruba`](https://github.com/aslakhellesoy/aruba) - Cuke-style command-line tests
+* [`gem-man`](https://github.com/defunkt/gem-man) - Man-like page installed with your gem
 
 !SLIDE bullets incremental
 # In conclusion…
@@ -26,8 +27,20 @@
 * Tools like GLI and OptionParser make it fast
 * “Future you” thanks you
 
+!SLIDE 
+# Think I'm full of it?
+
+!SLIDE 
+# or missing something obvious?
+
+!SLIDE bullets incremental
+# Be a tech reviewer
+* Book scheduled for PragProg for Sept/Oct
+* In the editing phase
+* Need tech reviewers…who care!
+
 !SLIDE bullets
-# As do I!
+# Thanks!
 * [@davetron5000](http://www.twitter.com/davetron5000)
 * [My Blog](http://www.naildrivin5.com/blog)
 * [Slides on Github](http://www.github.com/davetron5000/awesome-cli-ruby)

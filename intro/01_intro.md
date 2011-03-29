@@ -54,6 +54,15 @@
     ls: /? No such file or directory
     $ vi ./one_off_script.sh
 
+
+!SLIDE bullets incremental
+# Why care about command-line apps? #
+* You *will* have to write them
+* And they *will* become someone's job
+* And you *will* be on the hook to fix them
+
+!SLIDE
+# Also, the command-line is an infinitely flexible way to glue disparate systems together and you should totally write more command-line apps in general, because they are super helpful to developers and sysadmins alike!
 !SLIDE bullets incremental
 # Make even your one-off scripts awesome #
 

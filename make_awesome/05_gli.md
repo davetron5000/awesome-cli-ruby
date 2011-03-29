@@ -12,11 +12,16 @@
 !SLIDE commandline small incremental
 
     $ gem install gli
+    Successfully installed gli
     $ gli init todo new list complete
     Creating dir ./todo/lib...
     Creating dir ./todo/bin...
     Creating dir ./todo/test...
     Created ./todo/bin/todo
+    $ cd todo ; ls
+    Gemfile       README.rdoc    Rakefile
+    bin/          lib/           test/         
+    todo.gemspec  todo.rdoc
     $ todo/bin/todo
     usage: todo [global options] command [command options]
 
@@ -39,18 +44,6 @@
 * Complex help formatting
 * Boilerplate gem-ified project
 
-!SLIDE commandline incremental
-
-    $ cd todo ; ls
-    Gemfile
-    README.rdoc
-    Rakefile
-    bin/
-    lib/
-    test/
-    todo.gemspec
-    todo.rdoc
-   
 !SLIDE
 # Make UI
 

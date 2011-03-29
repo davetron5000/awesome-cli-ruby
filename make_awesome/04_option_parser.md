@@ -7,7 +7,7 @@
 
     options = {}
     opts = OptionParser.new do |opts|
-      opts.banner = "Jeklly is a static site generator"
+      opts.banner = "Jekyll is a static site generator"
 
       # option specifications go here
 

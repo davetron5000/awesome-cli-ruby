@@ -26,21 +26,6 @@
     Transcript written on texput.log.
 
 !SLIDE commandline small incremental
-# Example - Helpful
-## (Simple application)
-
-    $ curl -h
-    Usage: curl [options...] <url>
-    Options: (H) means HTTP/HTTPS only, (F) means FTP only
-        --anyauth       Pick "any" authentication method (H)
-     -a/--append        Append to target file when uploading (F/SFTP)
-        --basic         Use HTTP Basic Authentication (H)
-    <snip>
-     -V/--version       Show version number and quit
-     -w/--write-out <format> What to output after completion
-     -q                 If used as the first parameter disables .curlrc
-
-!SLIDE commandline small incremental
 # Helpful
 ## (Command Suite application)
     $ git
