@@ -14,14 +14,14 @@
 * Poor `system` error handling
 * Poor user interface
 
-!SLIDE small
+!SLIDE
 # Poor `system` error handling
 
     @@@Ruby
-    system('some_external_command.sh > results.txt')
-    # Of course, everthing worked, right?
-    File.open('results.txt') do |file|
-      # Dutifully read the file
+    results = %x[some_external_command.sh]
+    # Of course, everythning worked, right?
+    results.readlines.each do |line|
+      # Wait, is this stdout or stderr?!?!
     end
 
 !SLIDE commandline
@@ -29,22 +29,12 @@
     $ my_script.rb
     sh: some_external_command.sh: command not found
 
-
-!SLIDE
-# OK, fine
-    @@@Ruby
-    results = %x[some_external_command.sh]
-    results.readlines.each do |line|
-      # Wait, is this stdout or stderr?!?!
-    end
-
 !SLIDE bullets incremental
 # How to really do it
-* Check exit codes
-* Log the command
-* Capture the output
+* *Check exit codes* - plays well!
+* *Log the command* - helpful!
+* *Capture the output* - helpful
 * Be kind to “future you”
-
 
 !SLIDE smaller 
 # Check exit codes
@@ -110,8 +100,8 @@
 !SLIDE bullets incremental
 #WTF?
 ## That's like…22 lines! 
-* Stash it in a method somewhere
-* And use it instead of `system`
+* Stash it in a method somewhere,
+* and use it instead of `system` or `%x[]`
 * External calls are now bulletproof
 * Diagnostics built-in when `cron` dies at 3am
 
@@ -152,3 +142,9 @@
         # Should actually exit nonzero here :(
     end
 
+!SLIDE
+# Poor User Interface
+* Hard to maintain
+* Hard to enhance
+* *More* work than using libraries
+* Unpolished and inflexible

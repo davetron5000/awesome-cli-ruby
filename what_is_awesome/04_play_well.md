@@ -135,12 +135,13 @@
 
 !SLIDE 
 # The UNIX Way #
+## In a nutshell 
 
     @@@Ruby
 
     if ARGV[0]
       $stderr.puts "ERROR: no search term"
-      exit -2 
+      exit -1
     end
     matches = 0
     $stdin.readlines do |line|
@@ -150,6 +151,6 @@
       end
     end
 
-    exit -1 if matches == 0
+    exit -2 if matches == 0
     exit 0
 

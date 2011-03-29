@@ -1,5 +1,5 @@
 !SLIDE smbullets
-# Start making Awesome Command-Line Aps
+# Start making Awesome Command-Line Apps
 ## (with Ruby)
 ### Dave Copeland
 * [@davetron5000](http://www.twitter.com/davetron5000) / davidcopeland (at) naildrivin5.com
