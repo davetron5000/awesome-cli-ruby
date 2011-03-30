@@ -27,7 +27,6 @@
 
 !SLIDE commandline small incremental
 # Helpful
-## (Command Suite application)
     $ git
     usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
                [-p|--paginate|--no-pager]

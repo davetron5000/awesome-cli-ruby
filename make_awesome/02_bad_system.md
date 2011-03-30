@@ -2,21 +2,6 @@
 # Poor `system` error handling
 
     @@@Ruby
-    results = %x[some_external_command.sh]
-    # Of course, everythning worked, right?
-    results.readlines.each do |line|
-      # Wait, is this stdout or stderr?!?!
-    end
-
-!SLIDE commandline
-
-    $ my_script.rb
-    sh: some_external_command.sh: command not found
-
-!SLIDE 
-# Worse
-
-    @@@Ruby
     date = Time.now.to_s
     filename = "#{date}_foo_db.sql"
     system("mysqldump foo_db > #{filename}.tmp")
@@ -52,6 +37,11 @@
 # Throw it in a method
 
     @@@Ruby
+
+    def awe_sh(command)
+      # Stuff from previous slide...
+    end
+
     date = Time.now.to_s
     filename = "#{date}_foo_db.sql"
     if awe_sh("mysqldump foo_db > #{filename}.tmp")
