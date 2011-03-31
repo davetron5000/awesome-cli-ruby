@@ -8,7 +8,7 @@
 # Example - Not First Class #
 ## [SBT](http://code.google.com/p/simple-build-tool/wiki/Setup) ##
 
-    @@@ bash
+    @@@ sh
     # Put the jar in your ~/bin directory, put the line
     # java -Xmx512M -jar `dirname $0`/sbt-launch.jar "$@"
     # in a file called sbt in your ~/bin directory and do 
