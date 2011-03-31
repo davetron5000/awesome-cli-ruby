@@ -1,5 +1,5 @@
 !SLIDE
-# ② Be helpful
+# ➂ Be helpful
 
 !SLIDE commandline smaller incremental
 # Example - Not Helpful
@@ -42,6 +42,13 @@
     See 'git help COMMAND' for more information on a specific command.
     
 !SLIDE bullets incremental
+# Two classes of apps
+* *Simple* - does-one-thing-UNIX-style app
+* Think `ls` or `grep`
+* *Command Suite* - complex, does a lot
+* Think `git` or `gem`
+
+!SLIDE bullets incremental
 # Be Helpful #
 ## Simple ##
 ### `my_cmd`
@@ -65,12 +72,7 @@
 * List available commands
 * List globally-applicable options
 * Oh, and maybe say what your app is for
-
-!SLIDE bullets incremental
-# Be Helpful
-## Command Suite
-### `my_cmd help`
-* Same thing
+* `my_cmd help` should do the same
 
 !SLIDE bullets incremental
 # Be Helpful #

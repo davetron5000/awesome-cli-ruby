@@ -1,5 +1,5 @@
 !SLIDE 
-# ➂ Play Well With Others #
+# ② Play Well With Others
 
 !SLIDE bullets incremental
 # The UNIX Way
@@ -131,29 +131,4 @@
     $ svn stat | grep ^C | awk '{print $2}' | xargs svn resolved
     Resolved conflicted state of 'README.rdoc'
     Resolved conflicted state of 'test/tc_cmd.rb'
-
-!SLIDE small
-# The UNIX Way #
-## In a nutshell 
-
-    @@@Ruby
-
-    if ARGV[0]
-      # messaging goes to the right place!
-      $stderr.puts "ERROR: no search term"
-      # proper exit code
-      exit -1
-    end
-    matches = 0
-    $stdin.readlines do |line|
-      if line =~ /#{ARGV[0]}/
-        # not messing with stdin; line-oriented
-        puts line 
-        matches += 1
-      end
-    end
-
-    exit -2 if matches == 0
-    # proper exit code
-    exit 0
 
