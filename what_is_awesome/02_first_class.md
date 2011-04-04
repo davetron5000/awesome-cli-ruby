@@ -33,7 +33,7 @@
 
 !SLIDE bullets incremental
 # How?
-* Don't start off in `bash`…use Ruby
+* If you aren't a `bash` expert…start off in Ruby
 * Decide to have a _real_ UI
 * Decide to use good design, write documentation, and distribute with RubyGems
 * Decide to *care*
