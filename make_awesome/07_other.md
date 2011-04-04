@@ -45,3 +45,4 @@
 * [My Blog](http://www.naildrivin5.com/blog)
 * [Slides on Github](http://www.github.com/davetron5000/awesome-cli-ruby)
 * [Slides on Heroku](http://awesome-cli-ruby.heroku.com)
+* Rate this talk at [http://bit.ly/ruby-cli](http://speakerrate.com/talks/7017-make-awesome-command-line-applications-in-ruby)
