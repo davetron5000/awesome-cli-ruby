@@ -1,0 +1,918 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Presentation</title>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+    setupPreso(false, './');
+  });
+  </script>
+</head>
+
+<body>
+
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">&larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">z</td><td>toggle help (this)</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+  <span id="notesInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content smbullets" ref="intro/01_intro/1">
+<h1>Start making Awesome Command-Line Apps</h1>
+
+<h2>(with Ruby)</h2>
+
+<h3>Dave Copeland</h3>
+
+<ul>
+<li><a href="http://www.twitter.com/davetron5000">@davetron5000</a> / davidcopeland (at) naildrivin5.com</li>
+<li><a href="http://www.naildrivin5.com/blog">naildrivin5.com/blog</a></li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline incremental" ref="intro/01_intro/2">
+<h1>Who am I?</h1>
+
+<pre><code><code class="command">$ who am i</code><code class="result">
+Dave Copeland
+</code><code class="command">$ ps</code><code class="result">
+Engineering Lead at OPOWER
+</code><code class="command">$ whois OPOWER</code><code class="result">
+An energy-efficiency software startup in DC
+</code><code class="command">$ history</code><code class="result">
+1986  c64 basic
+1991  C # vi cursor keys didn't work
+1995  Perl
+1998  Java
+2008  Ruby
+</code><code class="command">$ history | grep IDE</code><code class="result">
+2010 history | grep IDE
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="intro/01_intro/3">
+<h1>Why care about command-line apps?</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="intro/01_intro/4">
+<h1>An all too familiar tale&#x2026;</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline incremental" ref="intro/01_intro/5">
+<h1>Emergency!</h1>
+
+<pre><code><code class="command">$ vi one_off_script.sh</code><code class="result">
+</code><code class="command">$ ./one_off_script.sh -x /tmp/foo.csv &gt; /top/magic.txt</code><code class="result">
+done.
+</code><code class="command">$ git add one_off_script.sh</code><code class="result">
+</code><code class="command">$ git commit -m 'automated stuff in time for launch'</code><code class="result">
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content center" ref="intro/01_intro/6">
+<h1>6 Months Later...</h1>
+
+<p><a href="http://www.monkeydyne.com/rmcs/yourcomic.phtml?tagline=It+could+happen+anywhere=ted1.gif=kid2.gif=Hey+Dave,+you+remember+that+script+you+wrote+for+that+thing%3F=Uh...=Yeah,+well,+it's+not+working.=Welll,+I'm+in+the+middle+of+build+and...=And+we+also+need+it+to+parse+XML="><img src="file:///Users/davec/Projects/awesome-cli-ruby/intro/comic.png"/></a></p>
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline incremental" ref="intro/01_intro/7">
+<h1>Opposite of fun</h1>
+
+<pre><code><code class="command">$ ./one_off_script.sh </code><code class="result">
+-bash: /tmp/intermediate.xml: not found 
+</code><code class="command">$ ./one_off_script.sh help</code><code class="result">
+-bash: help: command not found
+</code><code class="command">$ ./one_off_script.sh --help</code><code class="result">
+done.
+</code><code class="command">$ ./one_off_script.sh /?</code><code class="result">
+ls: /? No such file or directory
+</code><code class="command">$ vi ./one_off_script.sh</code><code class="result">
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="intro/01_intro/8">
+<h1>Why care about command-line apps?</h1>
+
+<ul>
+<li>You <em>will</em> have to write them</li>
+<li>And they <em>will</em> become someone's job</li>
+<li>And you <em>will</em> be on the hook to fix them</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="intro/01_intro/9">
+<h1>Also, the command-line is an infinitely flexible way to glue disparate systems together and you should totally write more command-line apps in general, because they are super helpful to developers and sysadmins alike!</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="intro/01_intro/10">
+<h1>Make even your one-off scripts awesome</h1>
+
+<ul>
+<li>No script is really a one-off</li>
+<li>Be kind to &#x201C;future you&#x201D;</li>
+<li>Ruby can make it easy</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/01_awesome_defined">
+<h1>Awesome Defined</h1>
+
+<ul>
+<li>Act Like a First Class App</li>
+<li>Play Well With Others</li>
+<li>Be Helpful</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/02_first_class/1">
+<h1>&#x2460; Act First Class</h1>
+
+<ul>
+<li>It's not a &#x201C;script&#x201D;</li>
+<li>&#x2026;it's an <em>application</em></li>
+<li>Approach it as you would first-class application</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="what_is_awesome/02_first_class/2">
+<h1>Example - Not First Class</h1>
+
+<h2><a href="http://code.google.com/p/simple-build-tool/wiki/Setup">SBT</a></h2>
+
+<pre class="sh_bash"><code># Put the jar in your ~/bin directory, put the line
+# java -Xmx512M -jar `dirname $0`/sbt-launch.jar "$@"
+# in a file called sbt in your ~/bin directory and do 
+# chmod u+x ~/bin/sbt</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline incremental" ref="what_is_awesome/02_first_class/3">
+<h1>Example - First Class</h1>
+
+<pre><code><code class="command">$ gem install showoff</code><code class="result">
+Successfully installed gem showoff
+</code><code class="command">$ showoff help</code><code class="result">
+usage: showoff command
+
+Commands:
+    add, new     - Add a new slide at the end in a given dir
+    create, init - Create new showoff presentation
+    help         - Shows list of commands or help for 
+                   one command
+    heroku       - Setup your presentation to serve 
+                   on Heroku
+    serve        - Serves the showoff presentation in the 
+                   current directory
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/02_first_class/4">
+<h1>How?</h1>
+
+<ul>
+<li>Don't start off in <code>bash</code>&#x2026;use Ruby</li>
+<li>Decide to have a <em>real</em> UI</li>
+<li>Decide to use good design, write documentation, and distribute with RubyGems</li>
+<li>Decide to <em>care</em></li>
+<li>If you plan ahead, this stuff isn't that hard</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="what_is_awesome/03_play_well/1">
+<h1>&#x2461; Play Well With Others</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/03_play_well/2">
+<h1>The UNIX Way</h1>
+
+<h2><a href="http://www.faqs.org/docs/artu/ch01s06.html">http://www.faqs.org/docs/artu/ch01s06.html</a></h2>
+
+<h3><em>(ii) Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input.</em></h3>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/03_play_well/3">
+<h1>The UNIX Way</h1>
+
+<ul>
+<li>machine-parsable (e.g. delimited)</li>
+<li>line-oriented (greppable)</li>
+<li>exit codes! (0 for success, -1 for failure)</li>
+<li>messaging (stderr) vs. output (stdout)</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline incremental smaller" ref="what_is_awesome/03_play_well/4">
+<h1>Example - Plays Horribly With Others</h1>
+
+<pre><code><code class="command">$ mvn test -Dtest=TestHeatingComparison</code><code class="result">
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Standalone Core Library
+[INFO]    task-segment: [test]
+[INFO] ------------------------------------------------------------------------
+[INFO] [resources:copy-resources {execution: default}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/davec/Projects/opower/core/null/null/trunk/src/main/resources/webclientconfig/clients/null/assets
+[INFO] [svn-revision-number:revision {execution: default}]
+[INFO] inspecting /Users/davec/Projects/opower/core
+[INFO] [resources:resources {execution: default-resources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 9 resources
+[INFO] Copying 1 resource
+[INFO] Copying 332 resources to patches/core
+[INFO] Copying 23 resources to postpatches/core
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Compiling 16 source files to /Users/davec/Projects/opower/core/target/classes
+[INFO] [checkstyle:checkstyle {execution: checkstyle}]
+[INFO] Starting audit...
+Audit done.
+
+[INFO] Setting property: classpath.resource.loader.class =&gt; 'org.codehaus.plexus.velocity.ContextClassLoaderResourceLoader'.
+[INFO] Setting property: velocimacro.messages.on =&gt; 'false'.
+[INFO] Setting property: resource.loader =&gt; 'classpath'.
+[INFO] Setting property: resource.manager.logwhenfound =&gt; 'false'.
+[INFO] ************************************************************** 
+[INFO] Starting Jakarta Velocity v1.4
+[INFO] RuntimeInstance initializing.
+[INFO] Default Properties File: org/apache/velocity/runtime/defaults/velocity.properties
+[INFO] Default ResourceManager initializing. (class org.apache.velocity.runtime.resource.ResourceManagerImpl)
+[INFO] Resource Loader Instantiated: org.codehaus.plexus.velocity.ContextClassLoaderResourceLoader
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline smaller" ref="what_is_awesome/03_play_well/5">
+<h1>Plays Horribly With Others (con't)</h1>
+
+<pre><code><code class="command">$ mvn test -Dtest=TestHeatingComparison # con't</code><code class="result">
+[INFO] ClasspathResourceLoader : initialization starting.
+[INFO] ClasspathResourceLoader : initialization complete.
+[INFO] ResourceCache : initialized. (class org.apache.velocity.runtime.resource.ResourceCacheImpl)
+[INFO] Default ResourceManager initialization complete.
+[INFO] Loaded System Directive: org.apache.velocity.runtime.directive.Literal
+[INFO] Loaded System Directive: org.apache.velocity.runtime.directive.Macro
+[INFO] Loaded System Directive: org.apache.velocity.runtime.directive.Parse
+[INFO] Loaded System Directive: org.apache.velocity.runtime.directive.Include
+[INFO] Loaded System Directive: org.apache.velocity.runtime.directive.Foreach
+[INFO] Created: 20 parsers.
+[INFO] Velocimacro : initialization starting.
+[INFO] Velocimacro : adding VMs from VM library template : VM_global_library.vm
+[ERROR] ResourceManager : unable to find resource 'VM_global_library.vm' in any resource loader.
+[INFO] Velocimacro : error using  VM library template VM_global_library.vm : org.apache.velocity.exception.ResourceNotFoundException: Unable to find resource 'VM_global_library.vm'
+[INFO] Velocimacro :  VM library template macro registration complete.
+[INFO] Velocimacro : allowInline = true : VMs can be defined inline in templates
+[INFO] Velocimacro : allowInlineToOverride = false : VMs defined inline may NOT replace previous VM definitions
+[INFO] Velocimacro : allowInlineLocal = false : VMs defined inline will be  global in scope if allowed.
+[INFO] Velocimacro : initialization complete.
+[INFO] Velocity successfully started.
+[INFO] [resources:testResources {execution: default-testResources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 501 resources
+[INFO] Copying 9 resources
+[INFO] [compiler:testCompile {execution: default-testCompile}]
+[INFO] Compiling 1 source file to /Users/davec/Projects/opower/core/target/test-classes
+[INFO] [surefire:test {execution: default-test}]
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline smaller" ref="what_is_awesome/03_play_well/6">
+<h1>Plays Horribly With Others (con't)</h1>
+
+<pre><code><code class="command">$ mvn test -Dtest=TestHeatingComparison # still con't</code><code class="result">
+[INFO] Surefire report directory: /Users/davec/Projects/opower/core/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running poscore.model.TestHeatingComparison
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.133 sec &lt;&lt;&lt; FAILURE!
+
+Results :
+
+Failed tests: 
+  testSetters(poscore.model.TestHeatingComparison)
+
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] There are test failures.
+
+Please refer to /Users/davec/Projects/opower/core/target/surefire-reports for the individual test results.
+[INFO] ------------------------------------------------------------------------
+[INFO] For more information, run Maven with the -e switch
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 13 seconds
+[INFO] Finished at: Fri May 07 13:50:01 EDT 2010
+[INFO] Final Memory: 54M/527M
+[INFO] ------------------------------------------------------------------------
+
+</code><code class="command">$ echo $?</code><code class="result">
+0
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline incremental" ref="what_is_awesome/03_play_well/7">
+<h1>Example - Plays Well With Others</h1>
+
+<pre><code><code class="command">$ svn stat</code><code class="result">
+M Rakefile
+C README.rdoc
+? bin/my_cmd
+C test/tc_cmd.rb
+</code><code class="command">$ vi `svn stat | grep ^C | awk '{print $2}'`</code><code class="result">
+# Now editing all files with conflicts
+</code><code class="command">$ svn stat | grep ^C | awk '{print $2}' | xargs svn resolved</code><code class="result">
+Resolved conflicted state of 'README.rdoc'
+Resolved conflicted state of 'test/tc_cmd.rb'
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="what_is_awesome/04_be_helpful/1">
+<h1>&#x2782; Be helpful</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline smaller incremental" ref="what_is_awesome/04_be_helpful/2">
+<h1>Example - Not Helpful</h1>
+
+<pre><code><code class="command">$ latex</code><code class="result">
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+**
+^C
+</code><code class="command">$ latex help</code><code class="result">
+This is pdfeTeX, Version 3.141592-1.21a-2.2 (Web2C 7.5.4)
+entering extended mode
+! I can't find file `help'.
+&lt;*&gt; help
+
+Please type another input file name:^C
+! I can't find file `help'.
+&lt;*&gt; help
+
+Please type another input file name: ^D
+! Emergency stop.
+&lt;*&gt; help
+
+No pages of output.
+Transcript written on texput.log.
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline small incremental" ref="what_is_awesome/04_be_helpful/3">
+<h1>Helpful</h1>
+
+<pre><code><code class="command">$ git</code><code class="result">
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   &lt;snip&gt;
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/04_be_helpful/4">
+<h1>Two classes of apps</h1>
+
+<ul>
+<li><em>Simple</em> - does-one-thing-UNIX-style app</li>
+<li>Think <code>ls</code> or <code>grep</code></li>
+<li><em>Command Suite</em> - complex, does a lot</li>
+<li>Think <code>git</code> or <code>gem</code></li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/04_be_helpful/5">
+<h1>Be Helpful</h1>
+
+<h2>Simple</h2>
+
+<h3><code>my_cmd</code></h3>
+
+<ul>
+<li>Don't do anything destructive by default</li>
+<li>Show a brief help statement</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/04_be_helpful/6">
+<h1>Be Helpful</h1>
+
+<h2>Simple</h2>
+
+<h3><code>my_cmd -h</code></h3>
+
+<ul>
+<li>Show a fuller help statement</li>
+<li>Also support <code>--help</code></li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/04_be_helpful/7">
+<h1>Be Helpful</h1>
+
+<h2>Command Suite</h2>
+
+<h3><code>my_cmd</code></h3>
+
+<ul>
+<li>List available commands</li>
+<li>List globally-applicable options</li>
+<li>Oh, and maybe say what your app is for</li>
+<li><code>my_cmd help</code> should do the same</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/04_be_helpful/8">
+<h1>Be Helpful</h1>
+
+<h2>Command Suite</h2>
+
+<h3><code>my_cmd help command_name</code></h3>
+
+<ul>
+<li>help on <code>command_name</code></li>
+<li>i.e. what it does</li>
+<li>and the options available</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/04_be_helpful/9">
+<h1>Oh, and useful error messages</h1>
+
+<ul>
+<li>&#x201C;undefined method `[]' for nil:NilClass (NoMethodError)&#x201D;</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="what_is_awesome/04_be_helpful/10">
+<h1>One <code>if</code> and 3 minutes later&#x2026;</h1>
+
+<ul>
+<li>&#x201C;Please specify your username&#x201D;</li>
+<li><em>(or whatever)</em></li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/01_making_awesome/1">
+<h1>Why Ruby?</h1>
+
+<ul>
+<li>High-level abstractions</li>
+<li>Still close to the &#x201C;metal&#x201D;&#xA0;(e.g. <code>FileUtils</code>)</li>
+<li>Simple packaging/distribution with RubyGems</li>
+<li>Fast - no heavyweight VM to start up</li>
+<li>Part of the culture</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="make_awesome/01_making_awesome/2">
+<h1>Give me something I can use&#x2026;</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/01_making_awesome/3">
+<h1>Biggest signs of un-awesome</h1>
+
+<ul>
+<li>Poor <code>system</code> error handling</li>
+<li>Poor user interface</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="make_awesome/02_bad_system/1">
+<h1>Poor <code>system</code> error handling</h1>
+
+<pre class="sh_Ruby"><code>date = Time.now.to_s
+filename = "#{date}_foo_db.sql"
+system("mysqldump foo_db &gt; #{filename}.tmp")
+FileUtils.mv("#{filename}.tmp",#{filename})
+system("gzip #{filename}")
+# Great for filling a disk!</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/02_bad_system/2">
+<h1>How to really do it</h1>
+
+<ul>
+<li><em>Check exit codes</em> - plays well!</li>
+<li><em>Log the command</em> - helpful!</li>
+<li><em>Capture the output</em> - helpful!</li>
+<li>Think of &#x201C;future you&#x201D;</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="make_awesome/02_bad_system/3">
+<h1>Use <code>open3</code></h1>
+
+<pre class="sh_Ruby"><code>command = "/full/path/to/some_external_command.sh"
+stdout,stderr,status = Open3.capture3(command)
+$stderr.split(/\n/).each { |line| $stderr.puts(line) }
+if status == 0 # Only in UNIX does 0 mean success
+  stdout.split(/\n/).each do |line|
+    # Do our work
+  end
+  true
+else
+  $stderr.puts("Problem running #{command}")
+  false
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="make_awesome/02_bad_system/4">
+<h1>Throw it in a method</h1>
+
+<pre class="sh_Ruby"><code>
+def awe_sh(command)
+  # Stuff from previous slide...
+end
+
+date = Time.now.to_s
+filename = "#{date}_foo_db.sql"
+if awe_sh("mysqldump foo_db &gt; #{filename}.tmp")
+  if FileUtils.mv("#{filename}.tmp",#{filename})
+    if awe_sh("gzip #{filename}")
+      exit 0
+    else
+      exit -1
+    end
+  else
+    FileUtils.rm("#{filename}.tmp")
+    exit -2
+  end
+else
+  FileUtils.rm("#{filename}.tmp")
+  exit -3
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/02_bad_system/5">
+<h1>Poor <code>system</code> handling</h1>
+
+<ul>
+<li>Customize it&#x2026;</li>
+<li>&#x2026;put it in a gem&#x2026;</li>
+<li>&#x2026;and use it instead of <code>system</code> or <code>%x[]</code></li>
+<li>External calls are now bulletproof</li>
+<li>And it's the same LOC</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="make_awesome/03_bad_ui/1">
+<h1>Poor User Interface</h1>
+
+<h2>Simple Apps</h2>
+
+<pre class="sh_Ruby"><code>
+if ARGV[0] == '-f'
+  filename = ARGV[1]
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="make_awesome/03_bad_ui/2">
+<h1>Poor User Interface</h1>
+
+<h2>Command-suite</h2>
+
+<pre class="sh_Ruby"><code>#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
+
+require 'showoff'
+command = ARGV.shift
+
+case command
+  when 'create'
+    ShowOffUtils.create
+  when 'add'
+    ShowOffUtils.add_slide
+  when 'heroku'
+    ShowOffUtils.heroku
+  when 'serve'
+    ShowOff.run! :host =&gt; 'localhost', :port =&gt; 9090
+  when 'static' 
+    ShowOff.do_static(ARGV)
+  else
+    ShowOffUtils.help
+    # Should actually exit nonzero here :(
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/03_bad_ui/3">
+<h1>Poor User Interface</h1>
+
+<ul>
+<li>Hard to maintain</li>
+<li>Hard to enhance</li>
+<li><em>More</em> work than using libraries</li>
+<li>Unpolished and inflexible</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="make_awesome/03_bad_ui/4">
+<h1>If you mainpulate <code>ARGV</code></h1>
+
+<h2>You're doing it wrong</h2>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small" ref="make_awesome/04_option_parser/1">
+<h1>Simple Apps</h1>
+
+<h2><code>OptionParser</code></h2>
+
+<pre class="sh_Ruby"><code>require 'optparse'
+
+options = {}
+opts = OptionParser.new do |opts|
+  opts.banner = "Jekyll is a static site generator"
+
+  # option specifications go here
+
+end
+opts.parse!</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="make_awesome/04_option_parser/2">
+<h1><code>OptionParser</code></h1>
+
+<h2>Parsing switches</h2>
+
+<pre class="sh_Ruby"><code>  opts.on("--auto", "Auto-regenerate") do
+    options['auto'] = true
+  end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content small" ref="make_awesome/04_option_parser/3">
+<h1><code>OptionParser</code></h1>
+
+<h2>Negatable switches</h2>
+
+<pre class="sh_Ruby"><code>  opts.on("--[no-]auto", "Auto-regenerate") do |auto|
+    options['auto'] = auto
+  end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="make_awesome/04_option_parser/4">
+<h1><code>OptionParser</code></h1>
+
+<h2>Parsing flags</h2>
+
+<pre class="sh_Ruby"><code>  options['port'] = 4000
+  opts.on("-s","--server [PORT]", 
+          "Start web server (def #{options['port']})") do |port|
+
+    raise "Port must be &gt;= 1000" if port &amp;&amp; port.to_i &lt; 1000
+
+    options['server_port'] = port.to_i if port
+  end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content smaller" ref="make_awesome/04_option_parser/5">
+<h1><code>OptionParser</code></h1>
+
+<h2>Casting</h2>
+
+<pre class="sh_Ruby"><code>opts.on("--time [TIME]", 
+        Time, 
+        "Begin execution at given time") do |time|
+  options['time'] = time # This is a Time instance
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/04_option_parser/6">
+<h1><code>OptionParser</code></h1>
+
+<ul>
+<li>Built-in</li>
+<li>Formatted help screen</li>
+<li>Dead simple</li>
+<li>No excuse, really</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/05_gli/1">
+<h1>What about command-suite?</h1>
+
+<ul>
+<li><code>OptionParser</code> not well suited</li>
+<li>A few other options</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/05_gli/2">
+<h1><code>GLI</code></h1>
+
+<ul>
+<li>Tailor-made for command-suite</li>
+<li>Make it easy for a polished UI</li>
+<li>Easy to get started</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline small incremental" ref="make_awesome/05_gli/3">
+<pre><code><code class="command">$ gem install gli</code><code class="result">
+Successfully installed gli
+</code><code class="command">$ gli init todo new list complete</code><code class="result">
+Creating dir ./todo/lib...
+Creating dir ./todo/bin...
+Creating dir ./todo/test...
+Created ./todo/bin/todo
+</code><code class="command">$ cd todo ; ls</code><code class="result">
+Gemfile       README.rdoc    Rakefile
+bin/          lib/           test/         
+todo.gemspec  todo.rdoc
+</code><code class="command">$ todo/bin/todo</code><code class="result">
+usage: todo [global options] command [command options]
+
+Version: 0.0.1
+
+Global Options:
+    -f, --flagname=The name of the argument - Describe some flag here 
+                                              (default: the default)
+    -s, --switch                            - Describe some switch here
+
+Commands:
+    complete - Describe complete here
+    help     - Shows list of commands or help for one command
+    list     - Describe list here
+    new      - Describe new here
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/05_gli/4">
+<h1>What did we just get?</h1>
+
+<ul>
+<li>Command and option parsing</li>
+<li>Complex help formatting</li>
+<li>Boilerplate gem-ified project</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="make_awesome/05_gli/5">
+<h1>Make UI</h1>
+
+<pre class="sh_Ruby"><code>desc 'List all todo items'
+command :list do |c|
+  c.desc 'List in long form'
+  c.switch :l
+
+  c.desc 'Show all items, even completed'
+  c.switch [:a,:all]
+
+  c.desc 'Specify sort order'
+  c.arg_name '[date|name|completed]'
+  c.flag [:s,:sort]
+  c.action do |global_options,options,args|
+    # Logic goes here
+  end
+end</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content commandline incremental" ref="make_awesome/05_gli/6">
+<h1>And now&#x2026;</h1>
+
+<pre><code><code class="command">$ bin/todo help</code><code class="result">
+usage: todo command [command options]
+
+Version: 0.0.1
+
+Commands:
+    complete - Complete one or more items
+    help     - Shows list of commands or help for one command
+    list     - List all todo items
+    new      - Create a new todo item
+</code><code class="command">$ bin/todo help list</code><code class="result">
+list [command options] 
+    List all todo items
+
+Command Options:
+    -a, --all                        - Show all items, even 
+                                       completed ones
+    -l                               - List in long form
+    -s, --sort=[date|name|completed] - Specify sort order
+</code></code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/05_gli/7">
+<h1>But wait&#x2026;there's more</h1>
+
+<ul>
+<li>Pre and Post hooks</li>
+<li>Custom error handling</li>
+<li>One-line config file support</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/06_summary/1">
+<h1><code>OptionParser</code> and <code>GLI</code></h1>
+
+<ul>
+<li>Dead-simple, polished UI</li>
+<li>Spend time on your app, not formatting help text</li>
+<li>Easily maintain documentation</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="make_awesome/06_summary/2">
+<h1>Anything else?</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/07_other/1">
+<h1>CLI-parsing tools</h1>
+
+<ul>
+<li><code>OptionParser</code> - builtin</li>
+<li><a href="http://github.com/davetron5000/gli/"><code>GLI</code></a> - mega-easy command-suite</li>
+<li><a href="http://visionmedia.github.com/commander/"><code>commander</code></a> - very similar to GLI</li>
+<li><a href="http://trollop.rubyforge.org/"><code>trollop</code></a> - simple and command-suite</li>
+<li><a href="http://github.com/wycats/thor"><code>thor</code></a> - install virtual commands on your system</li>
+<li><a href="https://github.com/joshbuddy/optitron"><code>optitron</code></a> - command-suite style</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/07_other/2">
+<h1>User interaction</h1>
+
+<ul>
+<li><a href="http://github.com/visionmedia/terminal-table"><code>terminal-tables</code></a> - make formatted ASCII tables</li>
+<li><a href="http://github.com/sickill/rainbow"><code>rainbow</code></a> - <font color="blue">color</font> <font color="red">your</font> <font color="green">output</font></li>
+<li><a href="http://highline.rubyforge.org/"><code>highline</code></a> - get user I/O cleanly</li>
+<li><code>readline</code> - (builtin) command-line history/editing</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/07_other/3">
+<h1>Other Stuff</h1>
+
+<ul>
+<li><a href="https://github.com/defunkt/fakefs"><code>fakefs</code></a> - Fake out the filesystem for testing</li>
+<li><a href="https://github.com/aslakhellesoy/aruba"><code>aruba</code></a> - Cuke-style command-line tests</li>
+<li><a href="https://github.com/defunkt/gem-man"><code>gem-man</code></a> - Man-like page installed with your gem</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/07_other/4">
+<h1>In conclusion&#x2026;</h1>
+
+<ul>
+<li>Making awesome is <em>easy</em></li>
+<li>Ruby makes it simple</li>
+<li>Tools like GLI and OptionParser make it fast</li>
+<li>&#x201C;Future you&#x201D; thanks you</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="make_awesome/07_other/5">
+<h1>Think I'm full of it?</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="make_awesome/07_other/6">
+<h1>or missing something obvious?</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="make_awesome/07_other/7">
+<h1>Be a tech reviewer</h1>
+
+<ul>
+<li>Book scheduled for PragProg for Sept/Oct</li>
+<li>In the editing phase</li>
+<li>Need tech reviewers&#x2026;who care!</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="make_awesome/07_other/8">
+<h1>Thanks!</h1>
+
+<ul>
+<li><a href="http://www.twitter.com/davetron5000">@davetron5000</a></li>
+<li><a href="http://www.naildrivin5.com/blog">My Blog</a></li>
+<li><a href="http://www.github.com/davetron5000/awesome-cli-ruby">Slides on Github</a></li>
+<li><a href="http://awesome-cli-ruby.heroku.com">Slides on Heroku</a></li>
+</ul>
+
+</div>
+</div></div>
+
+</body>
+</html>
