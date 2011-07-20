@@ -2,11 +2,14 @@
 # Poor `system` error handling
 
     @@@Ruby
+    include FileUtils
+
     date = Time.now.to_s
     filename = "#{date}_foo_db.sql"
-    system("mysqldump foo_db > #{filename}.tmp")
-    FileUtils.mv("#{filename}.tmp",#{filename})
-    system("gzip #{filename}")
+    tmp = "#{filename}.tmp"
+    `mysqldump foo_db > #{tmp}`
+    mv(tmp,filename)
+    `gzip #{filename}`
     # Great for filling a disk!
 
 !SLIDE bullets incremental
@@ -22,14 +25,14 @@
     @@@Ruby
     command = "/full/path/to/some_external_command.sh"
     stdout,stderr,status = Open3.capture3(command)
-    $stderr.split(/\n/).each { |line| $stderr.puts(line) }
-    if status == 0 # Only in UNIX does 0 mean success
+    STDERR.puts(stderr) # Their stderr is our stderr
+    if status.success?
       stdout.split(/\n/).each do |line|
         # Do our work
       end
       true
     else
-      $stderr.puts("Problem running #{command}")
+      STDERR.puts("Problem running #{command}")
       false
     end
 
@@ -37,27 +40,29 @@
 # Throw it in a method
 
     @@@Ruby
+    include FileUtils
 
-    def awe_sh(command)
+    def sh(command)
       # Stuff from previous slide...
     end
 
     date = Time.now.to_s
     filename = "#{date}_foo_db.sql"
-    if awe_sh("mysqldump foo_db > #{filename}.tmp")
-      if FileUtils.mv("#{filename}.tmp",#{filename})
-        if awe_sh("gzip #{filename}")
+    tmp = "#{filename}.tmp"
+    if sh("mysqldump foo_db > #{tmp}")
+      if mv(tmp,filename)
+        if sh("gzip #{filename}")
           exit 0
         else
-          exit -1
+          exit 1
         end
       else
-        FileUtils.rm("#{filename}.tmp")
-        exit -2
+        rm(tmp)
+        exit 2
       end
     else
-      FileUtils.rm("#{filename}.tmp")
-      exit -3
+      rm(tmp)
+      exit 3
     end
 
 !SLIDE bullets incremental

@@ -35,6 +35,10 @@
         # Should actually exit nonzero here :(
     end
 
+!SLIDE
+# If you mainpulate `ARGV`
+## You're doing it wrong
+
 !SLIDE bullets incremental
 # Poor User Interface
 * Hard to maintain
@@ -42,6 +46,3 @@
 * *More* work than using libraries
 * Unpolished and inflexible
 
-!SLIDE
-# If you mainpulate `ARGV`
-## You're doing it wrong

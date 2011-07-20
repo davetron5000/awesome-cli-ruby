@@ -11,9 +11,9 @@
     $ who am i
     Dave Copeland
     $ ps
-    Engineering Lead at OPOWER
+    Principal Engineer at OPOWER
     $ whois OPOWER
-    An energy-efficiency software startup in DC
+    An energy-efficiency software company in DC
     $ history
     1986  c64 basic
     1991  C # vi cursor keys didn't work
@@ -40,7 +40,18 @@
 
 !SLIDE center
 # 6 Months Later... #
-<a href="http://www.monkeydyne.com/rmcs/yourcomic.phtml?tagline=It+could+happen+anywhere&char1=ted1.gif&char2=kid2.gif&d1a=Hey+Dave,+you+remember+that+script+you+wrote+for+that+thing%3F&d1b=Uh...&d2a=Yeah,+well,+it's+not+working.&d2b=Welll,+I'm+in+the+middle+of+build+and...&d3a=And+we+also+need+it+to+parse+XML&d3b="><img src="comic.png" /></a>
+<img src="rage1.jpg" />
+
+!SLIDE center
+# 6 Months Later... #
+<img src="rage2.jpg" />
+
+!SLIDE center
+# 6 Months Later... #
+<img src="rage3.jpg" />
+
+!SLIDE center
+<img src="challenge.png" height='600'/>
 
 !SLIDE commandline incremental
 # Opposite of fun
@@ -52,7 +63,10 @@
     done.
     $ ./one_off_script.sh /?
     ls: /? No such file or directory
-    $ vi ./one_off_script.sh
+
+!SLIDE center
+## <tt>vi ./one_off_script.sh</tt>
+<img src="ok.png" />
 
 
 !SLIDE bullets incremental

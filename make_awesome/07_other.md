@@ -4,13 +4,14 @@
 * [`GLI`](http://github.com/davetron5000/gli/) - mega-easy command-suite
 * [`commander`](http://visionmedia.github.com/commander/) - very similar to GLI
 * [`trollop`](http://trollop.rubyforge.org/) - simple and command-suite
-* [`thor`](http://github.com/wycats/thor) - install virtual commands on your system
+* [`thor`](http://github.com/wycats/thor) - command-suite
 * [`optitron`](https://github.com/joshbuddy/optitron) - command-suite style
 
 !SLIDE bullets incremental
 # User interaction
 * [`terminal-tables`](http://github.com/visionmedia/terminal-table) - make formatted ASCII tables
 * [`rainbow`](http://github.com/sickill/rainbow) - <font color="blue">color</font> <font color="red">your</font> <font color="green">output</font>
+* [`formatador`](https://github.com/geemus/formatador) - tables, colors, progressbar
 * [`highline`](http://highline.rubyforge.org/) - get user I/O cleanly
 * `readline` - (builtin) command-line history/editing
 
@@ -35,14 +36,14 @@
 
 !SLIDE bullets incremental
 # Be a tech reviewer
-* Book scheduled for PragProg for Sept/Oct
+* Book for PragProg
 * In the editing phase
 * Need tech reviewers…who care!
 
-!SLIDE bullets
+!SLIDE smbullets
 # Thanks!
 * [@davetron5000](http://www.twitter.com/davetron5000)
-* [My Blog](http://www.naildrivin5.com/blog)
-* [Slides on Github](http://www.github.com/davetron5000/awesome-cli-ruby)
-* [Slides on Heroku](http://awesome-cli-ruby.heroku.com)
-* Rate this talk at [some_site](http://www.speakerrate.com)
+* [www.naildrivin5.com/blog](http://www.naildrivin5.com/blog)
+* Slides on Github - [http://bit.ly/cli-gh](http://bit.ly/cli-gh)
+* Slides on Heroku - [http://bit.ly/cli-slides](http://bit.ly/cli-slides)
+* Rate this talk at [http://bit.ly/cli-oscon-rate](http://bit.ly/cli-oscon-rate)

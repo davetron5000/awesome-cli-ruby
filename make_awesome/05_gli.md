@@ -22,7 +22,7 @@
     Gemfile       README.rdoc    Rakefile
     bin/          lib/           test/         
     todo.gemspec  todo.rdoc
-    $ todo/bin/todo
+    $ bin/todo
     usage: todo [global options] command [command options]
 
     Version: 0.0.1

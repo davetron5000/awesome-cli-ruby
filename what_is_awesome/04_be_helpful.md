@@ -1,5 +1,8 @@
-!SLIDE
+!SLIDE bullets incremental
 # ➂ Be helpful
+* Help users know how to use your app
+* Help users understand your app
+* Don't punish on user error - be helpful
 
 !SLIDE commandline smaller incremental
 # Example - Not Helpful
@@ -86,8 +89,4 @@
 !SLIDE bullets incremental
 # Oh, and useful error messages
 * “undefined method `[]' for nil:NilClass (NoMethodError)”
-
-!SLIDE bullets incremental
-# One `if` and 3 minutes later…
-* “Please specify your username”
-* _(or whatever)_
+* Ruby allows *any number* of `if` statements
