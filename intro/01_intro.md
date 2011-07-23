@@ -4,6 +4,7 @@
 ### Dave Copeland
 * [@davetron5000](http://www.twitter.com/davetron5000) / davidcopeland (at) naildrivin5.com / dave (at) opower.com
 * [naildrivin5.com/blog](http://www.naildrivin5.com/blog)
+* [heyitsopower.com](http://heyitsopower.com)
 
 !SLIDE commandline incremental
 # Who am I? #
