@@ -1,6 +1,6 @@
 # Awesome Command Line Applications in Ruby
 
-Slides for my talk at RubyNation, April, 2011
+Slides for my talk at OSCON, July, 2011
 
 # View
 
@@ -8,10 +8,11 @@ Slides for my talk at RubyNation, April, 2011
 
 # Building
 
-    sudo gem install showoff
     git clone http://github.com/davetron5000/awesome-cli-ruby.git
     cd awesome-cli-ruby
-    showoff serve # browse to http://localhost:9090
+    gem install bundler # use sudo if not using rvm
+    bundle install      # again, use sudo if not using rvm
+    showoff serve       # browse to http://localhost:9090
 
 # License
 
