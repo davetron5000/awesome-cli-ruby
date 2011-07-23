@@ -1,8 +1,9 @@
 !SLIDE smbullets
-# Start making Awesome Command-Line Apps
-## (with Ruby)
-### Dave Copeland
-* [@davetron5000](http://www.twitter.com/davetron5000) / davidcopeland (at) naildrivin5.com / dave (at) opower.com
+# Use Ruby to Start Making Awesome Command Line Applications
+## Dave Copeland
+* [@davetron5000](http://www.twitter.com/davetron5000) 
+* `davidcopeland (at) naildrivin5.com`
+* `dave (at) opower.com`
 * [naildrivin5.com/blog](http://www.naildrivin5.com/blog)
 * [heyitsopower.com](http://heyitsopower.com)
 
@@ -77,7 +78,7 @@
 * And you *will* be on the hook to fix them
 
 !SLIDE
-# Also, the command-line is an infinitely flexible way to glue disparate systems together and you should totally write more command-line apps in general, because they are super helpful to developers and sysadmins alike!
+# Also, the command-line is an **infinitely flexible** way to **glue disparate systems** together and you should totally write more command-line apps in general, because they are **super helpful** to developers and sysadmins alike!
 !SLIDE bullets incremental
 # Make even your one-off scripts awesome #
 

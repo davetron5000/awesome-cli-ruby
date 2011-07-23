@@ -1,4 +1,4 @@
-!SLIDE bullets incremental
+!SLIDE smbullets incremental
 # CLI-parsing tools
 * `OptionParser` - builtin
 * [`GLI`](http://github.com/davetron5000/gli/) - mega-easy command-suite
@@ -7,13 +7,13 @@
 * [`thor`](http://github.com/wycats/thor) - command-suite
 * [`optitron`](https://github.com/joshbuddy/optitron) - command-suite style
 
-!SLIDE bullets incremental
+!SLIDE smbullets incremental
 # User interaction
+* `readline` - (builtin) command-line history/editing
+* [`highline`](http://highline.rubyforge.org/) - get user I/O cleanly
 * [`terminal-tables`](http://github.com/visionmedia/terminal-table) - make formatted ASCII tables
 * [`rainbow`](http://github.com/sickill/rainbow) - <font color="blue">color</font> <font color="red">your</font> <font color="green">output</font>
 * [`formatador`](https://github.com/geemus/formatador) - tables, colors, progressbar
-* [`highline`](http://highline.rubyforge.org/) - get user I/O cleanly
-* `readline` - (builtin) command-line history/editing
 
 !SLIDE bullets incremental
 # Other Stuff
