@@ -1,5 +1,5 @@
 !SLIDE 
-# ② Play Well With Others
+# (2) Play Well With Others
 
 !SLIDE bullets incremental
 # The UNIX Way

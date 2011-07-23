@@ -1,7 +1,7 @@
 !SLIDE bullets incremental
-# ① Act First Class #
-* It's not a “script”
-* …it's an _application_
+# (1) Act First Class #
+* It's not a "script"
+* ...it's an _application_
 * Approach it as you would first-class application
 
 !SLIDE bullets incremental

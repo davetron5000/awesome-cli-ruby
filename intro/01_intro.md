@@ -27,7 +27,7 @@
 # Why care about command-line apps? #
 
 !SLIDE
-# An all too familiar tale…
+# An all too familiar tale...
 
 !SLIDE commandline incremental
 # Emergency! #
@@ -81,5 +81,5 @@
 # Make even your one-off scripts awesome #
 
 * No script is really a one-off
-* Be kind to “future you”
+* Be kind to "future you"
 * Ruby can make it easy

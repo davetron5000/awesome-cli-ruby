@@ -22,11 +22,11 @@
 * [`gem-man`](https://github.com/defunkt/gem-man) - Man-like page installed with your gem
 
 !SLIDE bullets incremental
-# In conclusion…
+# In conclusion...
 * Making awesome is *easy*
 * Ruby makes it simple
 * Tools like GLI and OptionParser make it fast
-* “Future you” thanks you
+* "Future you" thanks you
 
 !SLIDE 
 # Think I'm full of it?
@@ -38,7 +38,7 @@
 # Be a tech reviewer
 * Book for PragProg
 * In the editing phase
-* Need tech reviewers…who care!
+* Need tech reviewers...who care!
 
 !SLIDE smbullets
 # Thanks!

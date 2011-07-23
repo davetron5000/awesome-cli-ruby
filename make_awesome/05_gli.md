@@ -65,7 +65,7 @@
     end
    
 !SLIDE commandline incremental
-# And now…
+# And now...
     $ bin/todo help
     usage: todo command [command options]
 
@@ -88,7 +88,7 @@
 
 
 !SLIDE bullets incremental
-# But wait…there's more
+# But wait...there's more
 * Pre and Post hooks
 * Custom error handling
 * One-line config file support

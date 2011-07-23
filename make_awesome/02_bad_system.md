@@ -17,7 +17,7 @@
 * *Check exit codes* - plays well!
 * *Log the command* - helpful!
 * *Capture the output* - helpful!
-* Think of “future you”
+* Think of "future you"
 
 !SLIDE smaller 
 # Use `open3`
@@ -67,9 +67,9 @@
 
 !SLIDE bullets incremental
 # Poor `system` handling
-* Customize it…
-* …put it in a gem… 
-* …and use it instead of `system` or `%x[]`
+* Customize it...
+* ...put it in a gem...
+* ...and use it instead of `system` or `%x[]`
 * External calls are now bulletproof
 * And it's the same LOC
 
