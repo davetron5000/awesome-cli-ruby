@@ -7,11 +7,34 @@ body {
     background: #005293;
 }
 
+div.subsection h1 {
+    background: #0088CE;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+blockquote {
+    margin: 20px;
+    padding: 20px;
+    text-indent: 40px;
+    border: solid thin;
+    background: #3c3c3c;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+blockquote p em {
+    color: white;
+    font-size: 200%;
+    line-height: 40px;
+    font-family: Georgia, Times, serif;
+}
 .slide {
     background-image: url("opower.png");
     background-repeat: no-repeat;
     background-attachment:fixed;
-    background-position: 92% 95%;
+    background-position: 83% 94%;
 }
 
 a:hover, a:visited, a {
@@ -49,6 +72,9 @@ code.result {
 :1,$s/teal/#D9E506/gc
  */
 
+pre.sh_sourceCode {
+    background: transparent;
+}
 pre.sh_sourceCode .sh_keyword { color: #0088CE; font-weight: bold; }           /* language keywords */
 pre.sh_sourceCode .sh_type { color: #7AB800; }                            /* basic types */
 pre.sh_sourceCode .sh_usertype { color: #D9E506; }                             /* user defined types */
