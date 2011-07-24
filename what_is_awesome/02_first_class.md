@@ -1,5 +1,8 @@
-!SLIDE bullets incremental
+!SLIDE bullets incremental subsection
 # (1) Act First Class #
+
+!SLIDE bullets incremental 
+# Act First Class #
 * It's not a "script"
 * ...it's an _application_
 * Approach it as you would first-class application

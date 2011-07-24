@@ -1,5 +1,8 @@
-!SLIDE bullets incremental
+!SLIDE bullets incremental subsection
 # (3) Be helpful
+
+!SLIDE bullets incremental
+# Be helpful
 * Help users know how to use your app
 * Help users understand your app
 * Don't punish on user error - be helpful

@@ -16,10 +16,11 @@
 * [`formatador`](https://github.com/geemus/formatador) - tables, colors, progressbar
 
 !SLIDE bullets incremental
-# Other Stuff
+# Testing & Documentation
 * [`fakefs`](https://github.com/defunkt/fakefs) - Fake out the filesystem for testing
 * [`aruba`](https://github.com/aslakhellesoy/aruba) - Cuke-style command-line tests
-* [`gem-man`](https://github.com/defunkt/gem-man) - Man-like page installed with your gem
+* [`gem-man`](https://github.com/defunkt/gem-man) - Install man pages with your gem
+* [`ron`](http://rtomayko.github.com/ronn/) - Author man pages in markdown
 
 !SLIDE bullets incremental
 # In conclusion...
@@ -28,13 +29,13 @@
 * Tools like GLI and OptionParser make it fast
 * "Future you" thanks you
 
-!SLIDE 
+!SLIDE  subsection
 # Think I'm full of it?
 
-!SLIDE 
+!SLIDE  subsection
 # or missing something obvious?
 
-!SLIDE bullets incremental
+!SLIDE bullets
 # Be a tech reviewer
 * Book for PragProg
 * In the editing phase

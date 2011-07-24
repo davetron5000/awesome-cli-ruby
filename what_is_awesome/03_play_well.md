@@ -1,10 +1,10 @@
-!SLIDE 
+!SLIDE subsection
 # (2) Play Well With Others
 
 !SLIDE bullets incremental
 # The UNIX Way
 ## [http://www.faqs.org/docs/artu/ch01s06.html](http://www.faqs.org/docs/artu/ch01s06.html) ##
-### _(ii) Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input._ ###
+> _(ii) Expect the output of every program to become the input to another, as yet unknown, program. Don't clutter output with extraneous information. Avoid stringently columnar or binary input formats. Don't insist on interactive input._
 
 !SLIDE  bullets incremental
 # The UNIX Way ##

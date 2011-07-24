@@ -35,9 +35,8 @@
         # Should actually exit nonzero here :(
     end
 
-!SLIDE
-# If you mainpulate `ARGV`
-## You're doing it wrong
+!SLIDE subsection
+# If you manipulate `ARGV`, you're doing it wrong
 
 !SLIDE bullets incremental
 # Poor User Interface

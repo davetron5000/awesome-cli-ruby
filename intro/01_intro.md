@@ -78,7 +78,7 @@
 * And you *will* be on the hook to fix them
 
 !SLIDE
-# Also, the command-line is an **infinitely flexible** way to **glue disparate systems** together and you should totally write more command-line apps in general, because they are **super helpful** to developers and sysadmins alike!
+# Also, the command-line is an **infinitely flexible** way to **glue disparate systems** together and being able to write them makes you a **better, more versatile** developer
 !SLIDE bullets incremental
 # Make even your one-off scripts awesome #
 

@@ -4,5 +4,5 @@
 * Spend time on your app, not formatting help text
 * Easily maintain documentation
 
-!SLIDE
-# Anything else?
+!SLIDE subsection
+# Other CLI Gems

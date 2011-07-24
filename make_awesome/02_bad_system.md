@@ -1,5 +1,5 @@
 !SLIDE
-# Poor `system` error handling
+# Poor subprocess management
 
     @@@Ruby
     include FileUtils
@@ -7,10 +7,10 @@
     date = Time.now.to_s
     filename = "#{date}_foo_db.sql"
     tmp = "#{filename}.tmp"
-    `mysqldump foo_db > #{tmp}`
+    %x[mysqldump foo_db > #{tmp}]
     mv(tmp,filename)
-    `gzip #{filename}`
-    # Great for filling a disk!
+    %x[gzip #{filename}]
+    # Hope nothing went wrong!
 
 !SLIDE bullets incremental
 # How to really do it
@@ -26,6 +26,7 @@
     command = "/full/path/to/some_external_command.sh"
     stdout,stderr,status = Open3.capture3(command)
     STDERR.puts(stderr) # Their stderr is our stderr
+
     if status.success?
       stdout.split(/\n/).each do |line|
         # Do our work
