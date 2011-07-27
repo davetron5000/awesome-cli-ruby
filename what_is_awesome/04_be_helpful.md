@@ -3,8 +3,7 @@
 
 !SLIDE bullets incremental
 # Be helpful
-* Help users know how to use your app
-* Help users understand your app
+* Help users know how to use and understand your app
 * Don't punish on user error - be helpful
 
 !SLIDE commandline smaller incremental
@@ -77,8 +76,7 @@
 
 * List available commands
 * List globally-applicable options
-* Oh, and maybe say what your app is for
-* `my_cmd help` should do the same
+* The command `help` should do the same (e.g. `my_cmd help`)
 
 !SLIDE bullets incremental
 # Be Helpful #

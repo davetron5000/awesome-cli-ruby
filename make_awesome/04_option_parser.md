@@ -9,9 +9,9 @@
     opts = OptionParser.new do |opts|
       executable_name = File.split($0)[1]
       opts.banner = <<-EOS
-    Usage: #{executable_name} [options] args...
-
     Jekyll is a static site generator
+
+    Usage: #{executable_name} [options] args...
       EOS
 
       # option specifications go here
@@ -42,24 +42,16 @@
 ## Parsing flags
 
     @@@ Ruby
-    options['port'] = 4000
+    options['port'] = 4000  # make a default
     opts.on("-s","--server [PORT]", 
             "Start web server (def #{options['port']})") do |port|
 
-      raise "Port must be >= 1000" if port && port.to_i < 1000
+      # Do some sanity checking
+      if port && port.to_i < 1000
+        raise "Port must be >= 1000" 
+      end
 
-      options['server_port'] = port.to_i if port
-    end
-
-!SLIDE smaller
-# <code>OptionParser</code>
-## Casting
-
-    @@@ Ruby
-    opts.on("--time [TIME]", 
-            Time, 
-            "Begin execution at given time") do |time|
-      options['time'] = time # This is a Time instance
+      options['server_port'] = port.to_i
     end
 
 !SLIDE smaller
@@ -73,9 +65,21 @@
       options['ip'] = ip # <- matches the regex
     end
 
+!SLIDE commandline small incremental
+# <code>OptionParser</code>
+## Awesome Help
+    $ awesome_app -h
+    My awesome app is awesome
+
+    Usage: awesome_app [options] args...
+
+        --[no-]auto                  Auto-regenerate
+    -s, --server [PORT]              Start web server (def 4000)
+        --ip IP                      IP address to bind to
+    $ awesome_app --help 
+    # same thing
+
 !SLIDE bullets incremental
 # `OptionParser`
-* Built-in
-* Formatted help screen
-* Dead simple
+* Easy for others to modify, too
 * No excuse, really

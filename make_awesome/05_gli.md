@@ -9,7 +9,7 @@
 * Make it easy for a polished UI
 * Easy to get started
 
-!SLIDE commandline small incremental
+!SLIDE commandline incremental
 
     $ gem install gli
     Successfully installed gli
@@ -22,6 +22,8 @@
     Gemfile       README.rdoc    Rakefile
     bin/          lib/           test/         
     todo.gemspec  todo.rdoc
+
+!SLIDE commandline small incremental
     $ bin/todo
     usage: todo [global options] command [command options]
 
@@ -37,6 +39,9 @@
         help     - Shows list of commands or help for one command
         list     - Describe list here
         new      - Describe new here
+    $ bin/todo help list
+    list 
+        Describe list here
    
 !SLIDE bullets incremental
 # What did we just get?
@@ -44,10 +49,15 @@
 * Complex help formatting
 * Boilerplate gem-ified project
 
-!SLIDE
+!SLIDE small
 # Make UI
 
     @@@Ruby
+    desc 'location of the todo file'
+    arg_name 'todo_file'
+    default_value '~/.todo.txt'
+    flag :f
+
     desc 'List all todo items'
     command :list do |c|
       c.desc 'List in long form'
@@ -64,10 +74,13 @@
       end
     end
    
-!SLIDE commandline incremental
+!SLIDE commandline small incremental
 # And now...
     $ bin/todo help
     usage: todo command [command options]
+
+    Global Options:
+      -f  - location of the todo file (default ~/.todo.txt)
 
     Version: 0.0.1
 
@@ -87,8 +100,6 @@
         -s, --sort=[date|name|completed] - Specify sort order
 
 
-!SLIDE bullets incremental
-# But wait...there's more
-* Pre and Post hooks
-* Custom error handling
-* One-line config file support
+!SLIDE bullets
+# Many other cool features, too
+* [github.com/davetron5000/gli](http://github.com/davetron5000/gli)

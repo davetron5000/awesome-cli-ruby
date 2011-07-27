@@ -6,11 +6,11 @@
 * High-level abstractions
 * Still close to the metal (e.g. `FileUtils`)
 * Fast (no heavyweight VM to start up)
+* Simple packaging/distribution with RubyGems
 
 !SLIDE bullets incremental
 # Ruby, The Ecosystem
 * CLI is part of the culture
-* Simple packaging/distribution with RubyGems
 * Great open-source gems for command-line
 * Great open-source gems for everything else
 

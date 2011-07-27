@@ -67,7 +67,7 @@
     ls: /? No such file or directory
 
 !SLIDE center
-## <tt>vi ./one_off_script.sh</tt>
+## <tt>vi ./one\_of\_script.sh</tt>
 <img src="ok.png" />
 
 
@@ -76,6 +76,7 @@
 * You *will* have to write them
 * And they *will* become someone's job
 * And you *will* be on the hook to fix them
+* Think about "future you"
 
 !SLIDE
 # Also, the command-line is an **infinitely flexible** way to **glue disparate systems** together and being able to write them makes you a **better, more versatile** developer

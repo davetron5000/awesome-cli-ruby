@@ -67,7 +67,7 @@
     end
 
 !SLIDE bullets incremental
-# Poor `system` handling
+# Awesome subprocess management
 * Customize it...
 * ...put it in a gem...
 * ...and use it instead of `system` or `%x[]`

@@ -8,9 +8,9 @@
 
 !SLIDE  bullets incremental
 # The UNIX Way ##
-* One "record" per line (<tt>grep</tt>able)
-* "Fields" delimited (<tt>cut</tt>able)
-* exit codes! (0 for success, nonzer for failure)
+* <tt>grep</tt>able (One "record" per line)
+* <tt>cut</tt>able (delimite "fields")
+* exit codes! (0 for success, nonzero for failure)
 * messaging (stderr) vs. output (stdout)
 
 !SLIDE commandline incremental smaller

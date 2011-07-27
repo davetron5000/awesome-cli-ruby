@@ -20,7 +20,7 @@
 * [`fakefs`](https://github.com/defunkt/fakefs) - Fake out the filesystem for testing
 * [`aruba`](https://github.com/aslakhellesoy/aruba) - Cuke-style command-line tests
 * [`gem-man`](https://github.com/defunkt/gem-man) - Install man pages with your gem
-* [`ron`](http://rtomayko.github.com/ronn/) - Author man pages in markdown
+* [`ronn`](http://rtomayko.github.com/ronn/) - Author man pages in markdown
 
 !SLIDE bullets incremental
 # In conclusion...
@@ -30,10 +30,10 @@
 * "Future you" thanks you
 
 !SLIDE  subsection
-# Think I'm full of it?
+# Am I missing something?
 
 !SLIDE  subsection
-# or missing something obvious?
+# or (gasp) wrong?
 
 !SLIDE bullets
 # Be a tech reviewer

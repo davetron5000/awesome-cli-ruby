@@ -8,22 +8,16 @@
       filename = ARGV[1]
     end
 
-!SLIDE smaller
+!SLIDE small
 # Poor User Interface
 ## Command-suite
 
     @@@ Ruby
-    #!/usr/bin/env ruby
-    $LOAD_PATH.unshift File.join(File.dirname(__FILE__), '..', 'lib')
-
-    require 'showoff'
     command = ARGV.shift
 
     case command
       when 'create'
         ShowOffUtils.create
-      when 'add'
-        ShowOffUtils.add_slide
       when 'heroku'
         ShowOffUtils.heroku
       when 'serve'
@@ -32,7 +26,6 @@
         ShowOff.do_static(ARGV)
       else
         ShowOffUtils.help
-        # Should actually exit nonzero here :(
     end
 
 !SLIDE subsection
@@ -40,8 +33,7 @@
 
 !SLIDE bullets incremental
 # Poor User Interface
-* Hard to maintain
-* Hard to enhance
+* Hard to maintain & enhance
+* Hard for _others_ to maintain & enhance
 * *More* work than using libraries
-* Unpolished and inflexible
 
