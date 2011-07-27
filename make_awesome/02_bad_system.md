@@ -13,7 +13,7 @@
     # Hope nothing went wrong!
 
 !SLIDE bullets incremental
-# How to really do it
+# How you should do it
 * *Check exit codes* - plays well!
 * *Log the command* - helpful!
 * *Capture the output* - helpful!

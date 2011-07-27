@@ -10,6 +10,6 @@
 !SLIDE bullets incremental
 # How?
 * Decide to have a _real_ UI
-* Decide to use good design, write documentation, and distribute with RubyGems
+* Decide to use good design, write documentation, and use a real distribution system
 * Decide to *care*
 * If you plan ahead, this stuff isn't that hard

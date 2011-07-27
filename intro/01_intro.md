@@ -53,10 +53,11 @@
 <img src="rage3.jpg" />
 
 !SLIDE center
+# Challenge Accepted
 <img src="challenge.png" height='600'/>
 
 !SLIDE commandline incremental
-# Opposite of fun
+# Challenge Accepted
     $ ./one_off_script.sh 
     -bash: /tmp/intermediate.xml: not found 
     $ ./one_off_script.sh help
