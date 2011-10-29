@@ -1,14 +1,46 @@
+/*
+ * LivingSocial Colors:
+ * 
+ * Primary Palette:
+ *
+ * honeycomb  - #e9ba2a;
+ * clementine - #f0812b;
+ * slushie    - #5fb8dd;
+ * frosting   - #ea0b8c;
+ *
+ * Secondary Palette:
+ *
+ * aloe   - #50886b;
+ * berry  - #508395;
+ * wasabi - #9eae3d;
+ * grape  - #92278f;
+ * spice  - #eb3f3c;
+ * wine   - #832e2f;
+ *
+ */
 body, .slide, h1, h2, h3, h4, h5, p, div {
-    color: #3c3c3c;
-    font-family: Helvetica, Verdana, sans-serif;
+    color: black;
+}
+
+h1 {
+    font-family: Arial rounded mt bold, Helvetica, Arial, sans-serif;
+}
+
+h2, h3, h4, h5 {
+  font-family: Georgia, Times, serif;
+  font-style: italic;
+}
+
+p, div, li {
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
-    background: #005293;
+    background: #e9ba2a;
 }
 
 div.subsection h1 {
-    background: #0088CE;
+    background: #f0812b;
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -19,7 +51,7 @@ blockquote {
     padding: 20px;
     text-indent: 40px;
     border: solid thin;
-    background: #3c3c3c;
+    background: #832e2f;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -28,77 +60,68 @@ blockquote p em {
     color: white;
     font-size: 200%;
     line-height: 40px;
-    font-family: Georgia, Times, serif;
 }
 .slide {
-    background-image: url("opower.png");
+    /*
+     * background-image: url("opower.png");
+     */
     background-repeat: no-repeat;
     background-attachment:fixed;
     background-position: 83% 94%;
 }
 
 a:hover, a:visited, a {
-    color: #005293;
+  color: #508395;
 }
 
 code.result {
-    font-weight: bold;
+  font-weight: bold;
+  color: #262626;
 }
 
 /*
- *        orig       Opower
- * color: black      black
- * color: blue       #0088CE
-:1,$s/blue/#0088CE/gc
- * color: brown      #FF5800
-:1,$s/brown/#FF5800/gc
- * color: cyan       #69C8F8
-:1,$s/cyan/#69C8F8/gc
- * color: darkblue   #005293
-:1,$s/darkblue/#005293/gc
- * color: darkgreen  #7AB800
-:1,$s/darkgreen/#7AB800/gc
- * color: darkred    #A30050
-:1,$s/darkred/#A30050/gc
- * color: orange     #FF5800
-:1,$s/orange/#FF5800/gc
- * color: pink       #B1059D
-:1,$s/pink/#B1059D/gc
- * color: purple     #B1059D
-:1,$s/purple/#B1059D/gc
- * color: red        #A30050
-:1,$s/red/#A30050/gc
- * color: teal       #D9E506
-:1,$s/teal/#D9E506/gc
+ *        orig       Opower    LivingSocial
+ * color: black      black       black;
+ * color: blue       #0088CE     #508395;
+ * color: brown      #FF5800     #e9ba2a;
+ * color: cyan       #69C8F8     #5fb8dd;
+ * color: darkblue   #005293     #508395;
+ * color: darkgreen  #7AB800     #50886b;
+ * color: darkred    #A30050     #832e2f;
+ * color: orange     #FF5800     #f0812b;
+ * color: pink       #B1059D     #ea0b8c;
+ * color: purple     #B1059D     #832e2f;
+ * color: red        #A30050     #eb3f3c;
+ * color: teal       #D9E506     #92278f;
  */
 
 pre.sh_sourceCode {
     background: transparent;
 }
-pre.sh_sourceCode .sh_keyword { color: #0088CE; font-weight: bold; }           /* language keywords */
-pre.sh_sourceCode .sh_type { color: #7AB800; }                            /* basic types */
-pre.sh_sourceCode .sh_usertype { color: #D9E506; }                             /* user defined types */
-pre.sh_sourceCode .sh_string { color: #A30050; font-family: monospace; }        /* strings and chars */
-pre.sh_sourceCode .sh_regexp { color: #FF5800; font-family: monospace; }     /* regular expressions */
-pre.sh_sourceCode .sh_specialchar { color: #B1059D; font-family: monospace; }  /* e.g., \n, \t, \\ */
-pre.sh_sourceCode .sh_comment { color: #FF5800; font-style: italic; }         /* comments */
-pre.sh_sourceCode .sh_number { color: #B1059D; }                             /* literal numbers */
-pre.sh_sourceCode .sh_preproc { color: #005293; font-weight: bold; }       /* e.g., #include, import */
-pre.sh_sourceCode .sh_symbol { color: #A30050; }                            /* */
+pre.sh_sourceCode .sh_keyword { color: #508395; font-weight: bold; }           /* language keywords */
+pre.sh_sourceCode .sh_type { color: #50886b; }                            /* basic types */
+pre.sh_sourceCode .sh_usertype { color: #92278f; }                             /* user defined types */
+pre.sh_sourceCode .sh_string { color: #832e2f; font-family: monospace; }        /* strings and chars */
+pre.sh_sourceCode .sh_regexp { color: #e9ba2a; font-family: monospace; }     /* regular expressions */
+pre.sh_sourceCode .sh_specialchar { color: #ea0b8c; font-family: monospace; }  /* e.g., \n, \t, \\ */
+pre.sh_sourceCode .sh_comment { color: #e9ba2a; font-style: italic; }         /* comments */
+pre.sh_sourceCode .sh_number { color: #ea0b8c; }                             /* literal numbers */
+pre.sh_sourceCode .sh_preproc { color: #508395; font-weight: bold; }       /* e.g., #include, import */
+pre.sh_sourceCode .sh_symbol { color: #832e2f; }                            /* */
 pre.sh_sourceCode .sh_function { color: black; font-weight: bold; }         /* function calls and declarations */
-pre.sh_sourceCode .sh_cbracket { color: #A30050; }                              /* block brackets (e.g., {, }) */
-pre.sh_sourceCode .sh_todo { font-weight: bold; background-color: #69C8F8; }   /* TODO and FIXME */
+pre.sh_sourceCode .sh_cbracket { color: #832e2f; }                              /* block brackets (e.g., {, }) */
+pre.sh_sourceCode .sh_todo { font-weight: bold; background-color: #5fb8dd; }   /* TODO and FIXME */
 
 /* Predefined variables and functions (for instance glsl) */
-pre.sh_sourceCode .sh_predef_var { color: #005293; }
-pre.sh_sourceCode .sh_predef_func { color: #005293; font-weight: bold; }
+pre.sh_sourceCode .sh_predef_var { color: #508395; }
+pre.sh_sourceCode .sh_predef_func { color: #508395; font-weight: bold; }
 
 /* for OOP */
-pre.sh_sourceCode .sh_classname { color: #D9E506; }
+pre.sh_sourceCode .sh_classname { color: #92278f; }
 
 
 /* other */
 pre.sh_sourceCode .sh_section { color: black; font-weight: bold; }
-pre.sh_sourceCode .sh_paren { color: #A30050; }
-pre.sh_sourceCode .sh_attribute { color: #7AB800; }
+pre.sh_sourceCode .sh_paren { color: #832e2f; }
+pre.sh_sourceCode .sh_attribute { color: #50886b; }
 
