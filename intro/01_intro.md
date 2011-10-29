@@ -5,7 +5,7 @@
 * `davidcopeland (at) naildrivin5.com`
 * `dave (at) opower.com`
 * [naildrivin5.com/blog](http://www.naildrivin5.com/blog)
-* [heyitsopower.com](http://heyitsopower.com)
+* [www.awesomecommandlineapps.com](http://www.awesomecommandlineapps.com)
 
 !SLIDE commandline incremental
 # Who am I? #
@@ -13,9 +13,16 @@
     $ who am i
     Dave Copeland
     $ ps
-    Principal Engineer at Opower
-    $ whois Opower
-    An energy-efficiency software company in DC
+    Engineer at LivingSocial
+    Author of "Build Awesome Command-Line Apps in Ruby"
+
+!SLIDE center
+
+<img src="book_cover.jpg" />
+
+!SLIDE commandline incremental
+# Who am I? #
+
     $ history
     1986  c64 basic
     1991  C # vi cursor keys didn't work

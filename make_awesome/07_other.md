@@ -35,16 +35,15 @@
 !SLIDE  subsection
 # or (gasp) wrong?
 
-!SLIDE bullets
-# Be a tech reviewer
-* Book for PragProg
-* In the editing phase
-* Need tech reviewers...who care!
+!SLIDE center
+
+<img src="../intro/book_cover.jpg" />
 
 !SLIDE smbullets
 # Thanks!
 * [@davetron5000](http://www.twitter.com/davetron5000)
 * [www.naildrivin5.com/blog](http://www.naildrivin5.com/blog)
+* [www.awesomecommandlineapps.com](http://www.awesomecommandlineapps.com)
 * Slides on Github - [http://bit.ly/cli-gh](http://bit.ly/cli-gh)
 * Slides on Heroku - [http://bit.ly/cli-slides](http://bit.ly/cli-slides)
 * Rate this talk at [http://bit.ly/cli-oscon-rate](http://bit.ly/cli-oscon-rate)
