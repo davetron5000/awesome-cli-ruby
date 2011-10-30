@@ -3,7 +3,7 @@
 ## Dave Copeland
 * [@davetron5000](http://www.twitter.com/davetron5000) 
 * `davidcopeland (at) naildrivin5.com`
-* `dave (at) opower.com`
+* `david.copeland (at) livingsocial.com`
 * [naildrivin5.com/blog](http://www.naildrivin5.com/blog)
 * [www.awesomecommandlineapps.com](http://www.awesomecommandlineapps.com)
 
@@ -14,7 +14,6 @@
     Dave Copeland
     $ ps
     Engineer at LivingSocial
-    Author of "Build Awesome Command-Line Apps in Ruby"
 
 !SLIDE center
 
