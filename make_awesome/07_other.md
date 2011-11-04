@@ -2,10 +2,9 @@
 # CLI-parsing tools
 * `OptionParser` - builtin
 * [`GLI`](http://github.com/davetron5000/gli/) - mega-easy command-suite
-* [`commander`](http://visionmedia.github.com/commander/) - very similar to GLI
-* [`trollop`](http://trollop.rubyforge.org/) - simple and command-suite
 * [`thor`](http://github.com/wycats/thor) - command-suite
-* [`optitron`](https://github.com/joshbuddy/optitron) - command-suite style
+* [`trollop`](http://trollop.rubyforge.org/) - simple and command-suite
+* [`methadone`](http://github.com/davetron5000/methadone/) - simple + bootstrapping
 
 !SLIDE smbullets incremental
 # User interaction
@@ -13,7 +12,6 @@
 * [`highline`](http://highline.rubyforge.org/) - get user I/O cleanly
 * [`terminal-tables`](http://github.com/visionmedia/terminal-table) - make formatted ASCII tables
 * [`rainbow`](http://github.com/sickill/rainbow) - <font color="blue">color</font> <font color="red">your</font> <font color="green">output</font>
-* [`formatador`](https://github.com/geemus/formatador) - tables, colors, progressbar
 
 !SLIDE bullets incremental
 # Testing & Documentation
