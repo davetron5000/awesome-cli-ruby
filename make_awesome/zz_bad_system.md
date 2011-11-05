@@ -7,10 +7,14 @@
     date = Time.now.to_s
     filename = "#{date}_foo_db.sql"
     tmp = "#{filename}.tmp"
+
     %x[mysqldump foo_db > #{tmp}]
+
     mv(tmp,filename)
+
     %x[gzip #{filename}]
-    # Hope nothing went wrong!
+
+    
 
 !SLIDE bullets incremental
 # How you should do it

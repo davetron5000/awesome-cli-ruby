@@ -18,7 +18,6 @@
 # Give me something I can use
 
 !SLIDE bullets incremental
-# Biggest signs of un-awesome
-* Poor subprocess management
-* Poor user interface
+# Big sign of un-awesome
+* Crappy user interface
 

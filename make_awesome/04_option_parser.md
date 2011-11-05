@@ -42,9 +42,8 @@
 ## Parsing flags
 
     @@@ Ruby
-    options['port'] = 4000  # make a default
-    opts.on("-s","--server [PORT]", 
-            "Start web server (def #{options['port']})") do |port|
+    opts.on("-s","--server PORT", 
+            "Start web server on PORT") do |port|
 
       # Do some sanity checking
       if port && port.to_i < 1000
@@ -74,7 +73,7 @@
     Usage: awesome_app [options] args...
 
         --[no-]auto                  Auto-regenerate
-    -s, --server [PORT]              Start web server (def 4000)
+    -s, --server  PORT               Start web server (def 4000)
         --ip IP                      IP address to bind to
     $ awesome_app --help 
     # same thing

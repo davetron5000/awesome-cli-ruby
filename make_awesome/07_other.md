@@ -15,7 +15,6 @@
 
 !SLIDE bullets incremental
 # Testing & Documentation
-* [`fakefs`](https://github.com/defunkt/fakefs) - Fake out the filesystem for testing
 * [`aruba`](https://github.com/aslakhellesoy/aruba) - Cuke-style command-line tests
 * [`gem-man`](https://github.com/defunkt/gem-man) - Install man pages with your gem
 * [`ronn`](http://rtomayko.github.com/ronn/) - Author man pages in markdown
@@ -44,4 +43,4 @@
 * [www.awesomecommandlineapps.com](http://www.awesomecommandlineapps.com)
 * Slides on Github - [http://bit.ly/cli-gh](http://bit.ly/cli-gh)
 * Slides on Heroku - [http://bit.ly/cli-slides](http://bit.ly/cli-slides)
-* Rate this talk at [http://bit.ly/cli-oscon-rate](http://bit.ly/cli-oscon-rate)
+* Rate this talk at [http://spkr8.com/t/8839](http://spkr8.com/t/8839)
