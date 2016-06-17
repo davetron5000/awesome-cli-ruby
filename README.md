@@ -4,7 +4,7 @@ Slides for my talk at OSCON, July, 2011
 
 # View
 
-* [View slides online](http://awesome-cli-ruby.heroku.com)
+* [View slides online](https://speakerdeck.com/davetron5000/build-awesome-command-line-applications-with-ruby)
 
 # Building
 
